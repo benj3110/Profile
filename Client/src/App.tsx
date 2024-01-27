@@ -1,11 +1,13 @@
+import HomePage from "./components/HomePage"
+import "./App.css"
 
 
-
-function App() {
+const App: React.FC = () => {
 
 
   return (
     <>
+      <HomePage />
     </>
   )
 }
