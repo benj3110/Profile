@@ -1,0 +1,22 @@
+.Navbar {
+	display: flex;
+	justify-content: center;
+	border: red 4px solid;
+	position: sticky;
+	top: 0;
+	width: 70vw;
+}
+
+.LinkContainer {
+	display: flex;
+	justify-content: space-evenly;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	width: 70vw;
+}
+.Links {
+	padding: 1rem;
+	flex-grow: 1;
+	text-align: center;
+}

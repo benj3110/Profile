@@ -1,7 +1,34 @@
-.sectionContainer {
+@use "../Base";
+
+.SectionContainer {
 	display: flex;
-    align-items: center;
+	justify-content: space-between;
+	align-items: center;
 	flex-direction: row;
-    height: 80vh;
-    border: red 2px solid
+	height: 80vh;
+	width: 70vw;
+	border: red 2px solid;
+}
+
+.AboutContainer {
+	margin: 3rem;
+}
+
+.SkillsAndQualificationsContainer {
+	margin: 3rem;
+}
+
+.SkillsContainer {
+	margin: 3rem;
+}
+
+.QualificationsContainer {
+	margin: 3rem;
+}
+
+.AboutCard {
+	width: 20rem;
+}
+
+.SkillsCard {
 }
