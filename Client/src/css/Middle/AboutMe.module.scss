@@ -3,32 +3,47 @@
 .SectionContainer {
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
+	align-items: flex-start;
+	padding-top: 15vh;
 	flex-direction: row;
-	height: 80vh;
-	width: 70vw;
+	height: 85vh;
+	width: 85vw;
 	border: red 2px solid;
 }
-
-.AboutContainer {
-	margin: 3rem;
+@media (max-width: 1650px) {
+	.SectionContainer {
+		flex-direction: column;
+		height: fit-content;
+	}
 }
 
 .SkillsAndQualificationsContainer {
-	margin: 3rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	height: 77vh;
 }
 
-.SkillsContainer {
-	margin: 3rem;
-}
-
-.QualificationsContainer {
-	margin: 3rem;
+.SkillsQualSeparator {
+	min-height: 2vh;
 }
 
 .AboutCard {
-	width: 20rem;
+	width: 40vw;
+	height: 77vh;
 }
 
 .SkillsCard {
+	width: 30vw;
+	height: 37.5vh;
+}
+
+.QualificationsCard {
+	width: 30vw;
+	height: 37.5vh;
+}
+
+.cardTitle {
+	font-size: 5rem;
+	margin-top: 1rem;
 }

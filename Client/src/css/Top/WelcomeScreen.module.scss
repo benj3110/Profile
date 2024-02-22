@@ -1,5 +1,7 @@
+@use "../Colours";
+
 .WelcomeScreenContainer {
-	border: red 4px solid;
-	width: 50vw;
-	height: 90vh;
+	width: 100vw;
+	height: 93vh;
+	background-color: Colours.$green;
 }

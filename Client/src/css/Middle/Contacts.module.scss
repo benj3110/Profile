@@ -1,24 +1,48 @@
+@use "../Colours";
+
+.ContactsHeader {
+	padding-top: 15vh;
+}
 .SectionContainer {
 	border: red 2px solid;
-	height: 80vh;
-	width: 70vw;
+	height: 100vh;
+	width: 85vw;
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
+	background-color: Colours.$purple;
 }
 
 .ContactsListContainer {
 	display: grid;
-	place-items: center;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr;
 	border: red 2px solid;
 	gap: 1rem;
-	height: 20vh;
-	width: 50vw;
+
+	width: 30vw;
+	min-height: fit-content;
 }
 .ContactsLogos {
 	width: 30px;
 	height: 30px;
 }
-.ContactsInfo{
+.ContactsInfo {
 	border: red 2px solid;
+}
+
+.ContactCardContents {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: row;
+	width: 15rem;
+	height: 4rem;
+	padding-left: 0rem;
+	text-decoration: none;
+	color: white;
+}
+
+.ContactTitle {
+	font-size: 2rem;
 }
