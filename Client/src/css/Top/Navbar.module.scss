@@ -6,8 +6,8 @@
 	align-items: center;
 	position: sticky;
 	top: 0;
-	width: 100vw;
-	height: 7vh;
+	width: 100%;
+	height: 7dvh;
 	background-color: Colours.$orange;
 	z-index: 1;
 }
@@ -35,15 +35,3 @@
 		background-color: Colours.$olive;
 	}
 }
-
-// .ProgressBar {
-// 	position: absolute;
-// 	top: 0;
-// 	left: 0;
-// 	height: 100%;
-// 	background-color: Colours.$olive;
-// 	z-index: -1;
-// 	width: 0;
-// 	border-radius: 1.5rem;
-// 	transition: width 0.3s ease;
-// }

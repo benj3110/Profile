@@ -1,22 +1,65 @@
+/** font options:  
+*! FredokaOne - very simple more bubble than circular, 
+*! odin bold - not actually that bold, very clean, less bubbly maybe best
+*/
+
 @font-face {
-	font-family: "powerSmash";
-	src: url("./public/fonts/Powersmash-owZLo.ttf") format("truetype");
+	font-family: "Odin";
+	src: url("./public/fonts/Odin-Rounded/Bold/Odin-Rounded-Bold.otf")
+		format("opentype");
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Odin";
+	src: url("./public/fonts/Odin-Rounded/Bold/Odin-Rounded-BoldItalic.otf")
+		format("opentype");
+	font-weight: bold;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Odin";
+	src: url("./public/fonts/Odin-Rounded/Light/Odin-Rounded-Light.otf")
+		format("opentype");
+	font-weight: light;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Odin";
+	src: url("./public/fonts/Odin-Rounded/Light/Odin-Rounded-Light-Italic.otf")
+		format("opentype");
+	font-weight: light;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Odin";
+	src: url("./public/fonts/Odin-Rounded/Regular/Odin-Rounded-Regular.otf")
+		format("opentype");
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face {
-	font-family: "rootsBranch";
-	src: url("./public/fonts/Rootsnbranches-RpwwM.ttf") format("truetype");
+	font-family: "Odin";
+	src: url("./public/fonts/Odin-Rounded/Regular/Odin-Rounded-Regular-Italic.otf")
+		format("opentype");
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "FredokaOne";
+	src: url("./public/fonts/FredokaOne-Regular.ttf") format("truetype");
 	font-weight: normal;
 	font-style: normal;
 }
 
 :root {
-	font-family: "powerSmash", "rootsBranch", Inter, system-ui, Avenir,
-		Helvetica, Arial, sans-serif;
+	font-family: "Odin", "FredokaOne", Inter, system-ui, sans-serif;
 	line-height: 1.5;
-	font-weight: 400;
-
+	font-weight: bold;
+	overflow-x: hidden;
 	color-scheme: light dark;
 	color: rgba(255, 255, 255, 0.87);
 	background-color: #fcefdf;
@@ -32,6 +75,7 @@ body {
 	place-items: center;
 	min-width: 320px;
 	min-height: 100vh;
+
 	justify-content: center;
 	align-items: flex-start;
 }
@@ -52,6 +96,7 @@ button {
 	cursor: pointer;
 	transition: border-color 0.25s;
 }
+
 button:hover {
 	border-color: #646cff;
 }

@@ -20,6 +20,6 @@ const Email: {
 	title: string;
 	icon: string;
 	link: string;
-} = { title: "Email", icon: gmailLogo, link: "" };
+} = { title: "Email", icon: gmailLogo, link: "benitovark@gmail.com" };
 
 export { ContactsList, Email };

@@ -9,14 +9,18 @@ const Contacts: React.FC = () => {
             <div className={styles.ContactsListContainer}>
                 {ContactsList.map((contact) => (
                     <ContactsCard key={contact.title}>
-                        <a href={contact.link} className={styles.ContactCardContents}>
+                        <a href={contact.link} className={styles.ContactCardContents} target="_blank">
                             <div className={styles.ContactTitle}>{contact.title}</div>
                             <img src={contact.icon} alt={contact.title} className={styles.ContactsLogos} />
                         </a>
                     </ContactsCard>
                 ))}
                 <ContactsCard>
-                    <div className={styles.ContactCardContents}>
+                    <div
+                        className={styles.ContactCardContents}
+                        onClick={() => {
+                            navigator.clipboard.writeText(Email.link);
+                        }}>
                         <div className={styles.ContactTitle}>{Email.title}</div>
                         <img src={Email.icon} alt={Email.title} className={styles.ContactsLogos} />
                     </div>
