@@ -3,7 +3,7 @@
 *! odin bold - not actually that bold, very clean, less bubbly maybe best
 */
 
-@font-face {
+/* @font-face {
 	font-family: "Odin";
 	src: url("./public/fonts/Odin-Rounded/Bold/Odin-Rounded-Bold.otf")
 		format("opentype");
@@ -46,7 +46,7 @@
 		format("opentype");
 	font-weight: normal;
 	font-style: italic;
-}
+} */
 
 @font-face {
 	font-family: "FredokaOne";
@@ -56,7 +56,7 @@
 }
 
 :root {
-	font-family: "Odin", "FredokaOne", Inter, system-ui, sans-serif;
+	font-family: Inter, "FredokaOne", system-ui, sans-serif;
 	line-height: 1.5;
 	font-weight: bold;
 	overflow-x: hidden;

@@ -2,26 +2,35 @@
 
 .Navbar {
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 	position: sticky;
 	top: 0;
 	width: 100%;
 	height: 7dvh;
-	background-color: Colours.$orange;
+	background-color: Colours.$neonPurple;
 	z-index: 1;
 }
 
 .LinkContainer {
-	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
 	list-style: none;
-	padding: 0;
-	margin: 0;
+	display: flex;
+	justify-content: flex-start;
 	width: 100%;
 	height: 100%;
+	padding: 0;
+	margin: 0;
 }
+.MainLinks {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 0;
+	margin: 0;
+	width: 60%;
+	height: 100%;
+}
+
 .Links {
 	display: flex;
 	justify-content: center;
@@ -32,6 +41,11 @@
 	transition: background-color 0.3s ease;
 	height: 100%;
 	&:hover {
-		background-color: Colours.$olive;
+		background-color: Colours.$neonPurpleGlow;
 	}
+}
+.Cv {
+	margin-left: auto;
+	width: 15%;
+	background-color: Colours.$solidBlue;
 }

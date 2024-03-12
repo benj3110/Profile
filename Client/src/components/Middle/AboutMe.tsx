@@ -27,7 +27,6 @@ const AboutMe: React.FC = () => {
                         <p>REACT uDemy</p>
                     </div>
                 </ProfileCard>
-
             </div>
         </section>);
 }

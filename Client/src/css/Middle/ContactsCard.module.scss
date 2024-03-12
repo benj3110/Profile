@@ -2,7 +2,7 @@
 .Card {
 	display: flex;
 	align-items: flex-start;
-	background-color: Colours.$orange;
+	background-color: Colours.$backgroundLighterDark;
 	border-radius: 3rem;
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 	width: min-content;
@@ -11,7 +11,7 @@
 }
 .Card:hover {
 	transform: scale(1.2);
-	box-shadow: 0 0px 8px Colours.$whiteSkin;
+	box-shadow: 0 0px 8px Colours.$green;
 }
 .Background {
 	border-radius: 3rem;
