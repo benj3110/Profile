@@ -2,15 +2,21 @@
 import styles from "../../css/Top/Navbar.module.scss"
 import { Link } from "react-scroll";
 const Navbar: React.FC = () => {
-
+    const openCV = () => {
+        const pdfUrl = "/BenitoVargheseCV.pdf";
+        window.open(pdfUrl, "_blank");
+    }
+    //todo active class styling
     return (
         <nav className={styles.Navbar}>
             <ul className={styles.LinkContainer}>
                 <div className={styles.MainLinks}>
-                    <Link activeClass="active"
+                    <Link
+                        activeClass="active"
                         spy={true}
                         smooth={true}
-                        to="profile" className={styles.Links}>
+                        to="profile"
+                        className={styles.Links}>
                         Profile
                     </Link>
                     <Link activeClass="active"
@@ -30,7 +36,8 @@ const Navbar: React.FC = () => {
                     <Link activeClass="active"
                         spy={true}
                         smooth={true}
-                        to="profile" className={styles.Links}>
+                        to="profile" className={styles.Links}
+                        onClick={openCV}>
                         CV
                     </Link>
                 </div>
