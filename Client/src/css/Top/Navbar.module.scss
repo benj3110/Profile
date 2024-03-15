@@ -27,7 +27,7 @@
 	align-items: center;
 	padding: 0;
 	margin: 0;
-	width: 60%;
+	width: 45%;
 	height: 100%;
 }
 
@@ -37,7 +37,7 @@
 	align-items: center;
 	flex-grow: 1;
 	text-align: center;
-	font-size: 2.2rem;
+	font-size: 1.5rem;
 	transition: background-color 0.3s ease;
 	height: 100%;
 	cursor: pointer;
@@ -55,7 +55,7 @@
 .Cv {
 	margin-left: auto;
 	margin-right: 1.5rem;
-	width: 10%;
+	width: 7%;
 	background-color: Colours.$solidBlue;
 	border-radius: 3rem;
 }

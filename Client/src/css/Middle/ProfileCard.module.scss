@@ -3,9 +3,10 @@
 .Card {
 	width: min-content;
 	height: min-content;
-	background: Colours.$backgroundLighterDark;
-	min-height: 0;
-	box-shadow: 0 10px 16px Colours.$green;
+	background: Colours.$backgroundDark;
+	min-height: fit-content;
+	min-width: fit-content;
+	// box-shadow: 0 0 9rem 3rem Colours.$lightPurple;
 	transition: all 0.3s ease-out;
 	text-decoration: none;
 	color: white;
@@ -13,11 +14,12 @@
 	display: flex;
 	align-items: flex-start;
 	border-radius: 2rem;
+	overflow: hidden;
 }
 
 .Card:hover {
 	transform: scale(1.005);
-	// box-shadow: 0 24px 36px Colours.$green, 0 24px 46px Colours.$green;
 	color: Colours.$green;
 	border: 0;
+	box-shadow: 0 10px 16px Colours.$green;
 }

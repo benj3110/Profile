@@ -6,6 +6,7 @@ const Navbar: React.FC = () => {
         const pdfUrl = "/BenitoVargheseCV.pdf";
         window.open(pdfUrl, "_blank");
     }
+    const offsetVh = window.innerHeight / 100;
     //todo active class styling
     return (
         <nav className={styles.Navbar}>
@@ -16,6 +17,7 @@ const Navbar: React.FC = () => {
                         spy={true}
                         smooth={true}
                         to="profile"
+                        offset={-(7 * offsetVh)}
                         className={styles.Links}>
                         Profile
                     </Link>
