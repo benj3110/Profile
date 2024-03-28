@@ -1,19 +1,20 @@
 @use "../Colours";
 .Card {
 	display: flex;
-	align-items: flex-start;
-	background-color: Colours.$backgroundLighterDark;
-	border-radius: 3rem;
-	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+	align-items: center;
+	justify-content: center;
+	background-color: Colours.$tropicalSea;
+	border-radius: 50%;
+	box-shadow: 0 0 8px 1px Colours.$lightBlueGlow;
 	width: min-content;
 	height: min-content;
-	transition: all 0.4s ease-in-out;
+	transition: all 0.2s ease-in-out;
 }
 .Card:hover {
-	transform: scale(1.2);
-	box-shadow: 0 0px 8px Colours.$green;
+	transform: scale(1.02) translate(0, -3px);
+	box-shadow: 0 0 6px 2px Colours.$lightBlueGlow;
 }
-.Background {
-	border-radius: 3rem;
-	background-color: white;
-}
+// .Background {
+// 	border-radius: 3rem;
+// 	background-color: white;
+// }

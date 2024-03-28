@@ -6,7 +6,9 @@
 	background: Colours.$backgroundDark;
 	min-height: fit-content;
 	min-width: fit-content;
-	// box-shadow: 0 0 9rem 3rem Colours.$lightPurple;
+
+	box-shadow: 0 0.2rem 0.8rem 0.1rem Colours.$lightBlue;
+
 	transition: all 0.3s ease-out;
 	text-decoration: none;
 	color: white;
@@ -19,7 +21,6 @@
 
 .Card:hover {
 	transform: scale(1.005);
-	color: Colours.$green;
 	border: 0;
-	box-shadow: 0 10px 16px Colours.$green;
+	box-shadow: 0 0.2rem 0.8rem 0.3rem Colours.$lightBlue;
 }

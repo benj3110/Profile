@@ -1,7 +1,7 @@
 import gitHubLogo from "../public/icons/githublogo.png";
-import linkedInLogo from "../public/icons/LinkedIn_logo_initials.png";
-import gmailLogo from "../public/icons/Gmail_icon_(2020).png";
-import whatsApp from "../public/icons/whatsappLogo.png";
+import linkedInLogo from "../public/icons/linkedin.png";
+import gmailLogo from "../public/icons/email.png";
+import whatsApp from "../public/icons/whatsapp.png";
 interface ContactsListType {
 	title: string;
 	icon: string;

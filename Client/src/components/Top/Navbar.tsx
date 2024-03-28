@@ -21,18 +21,25 @@ const Navbar: React.FC = () => {
                         className={styles.Links}>
                         Profile
                     </Link>
-                    <Link activeClass="active"
+                    <Link
+                        activeClass="active"
                         spy={true}
                         smooth={true}
-                        to="contacts" className={styles.Links}>
-                        Contacts
-                    </Link>
-                    <Link activeClass="active"
-                        spy={true}
-                        smooth={true}
-                        to="projects" className={styles.Links}>
+                        offset={-(7 * offsetVh)}
+                        to="projects"
+                        className={styles.Links}>
                         Projects
                     </Link>
+                    <Link
+                        activeClass="active"
+                        spy={true}
+                        smooth={true}
+                        offset={-(7 * offsetVh)}
+                        to="contacts"
+                        className={styles.Links}>
+                        Contacts
+                    </Link>
+
                 </div>
                 <div className={styles.Cv}>
                     <Link activeClass="active"

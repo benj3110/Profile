@@ -3,34 +3,32 @@ import ContactsCard from "./ContactsCard";
 import styles from "../../css/Middle/Contacts.module.scss"
 
 const Contacts: React.FC = () => {
-    return (<div className={styles.SectionContainer}>
-        <h1 className={styles.ContactsHeader}> Contact Me</h1>
-        <section id="contacts">
+    return (
+        <section id="contacts" className={styles.SectionContainer}>
+            <h1 className={styles.ContactsHeader}>Contact Me</h1>
+            <p className={styles.ContactsParagraph}>Want to talk tech or just say hi? Get in touch and make a new connection! </p>
             <div className={styles.ContactsListContainer}>
-                {ContactsList.map((contact) => (
-                    <ContactsCard key={contact.title}>
-                        <a href={contact.link} className={styles.ContactCardContents} target="_blank">
-                            <div className={styles.ContactTitle}>{contact.title}</div>
-                            <img src={contact.icon} alt={contact.title} className={styles.ContactsLogos} />
-                        </a>
-                    </ContactsCard>
-                ))}
                 <ContactsCard>
                     <div
                         className={styles.ContactCardContents}
                         onClick={() => {
                             navigator.clipboard.writeText(Email.link);
                         }}>
-                        <div className={styles.ContactTitle}>{Email.title}</div>
                         <img src={Email.icon} alt={Email.title} className={styles.ContactsLogos} />
                     </div>
                 </ContactsCard>
+                {ContactsList.map((contact) => (
+                    <ContactsCard key={contact.title}>
+                        <a href={contact.link} className={styles.ContactCardContents} target="_blank">
+                            <img src={contact.icon} alt={contact.title} className={styles.ContactsLogos} />
+                        </a>
+                    </ContactsCard>
+                ))}
+
             </div>
-            <span className={styles.ContactsInfo}>
-                contact me yea
-            </span>
+
         </section>
-    </div>);
+    );
 }
 
 export default Contacts;

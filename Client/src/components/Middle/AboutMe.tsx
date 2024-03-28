@@ -42,7 +42,7 @@ const AboutMe: React.FC = () => {
                         <div className={styles.QualCardContent}>
                             <h2 className={styles.CardTitle}>Qualifications</h2>
                             <ul className={styles.QualsList}>
-                                <li>AWS CCP/Solutions</li>
+                                <li>AWS CCP</li>
                                 <br />
                                 <li>REACT uDemy</li>
                             </ul>
@@ -50,7 +50,9 @@ const AboutMe: React.FC = () => {
                     </div>
                 </ProfileCard>
             </div>
-        </section>);
+            {/* <section id="projects" className={styles.SectionContainer}></section> */}
+        </section>
+    );
 }
 
 export default AboutMe;
