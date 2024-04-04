@@ -4,53 +4,75 @@ import styles from "../../css/Middle/AboutMe.module.scss"
 const AboutMe: React.FC = () => {
     return (
         <section className={styles.SectionContainer} id="profile">
-            <ProfileCard>
-                <div className={styles.AboutCard}>
-                    <div className={styles.AboutCardContent}>
-                        <h2 className={styles.CardTitle}>About Me</h2>
-                        <p className={styles.AboutParagraph}>
-                            I'm a highly skilled and versatile software engineer with a passion for creating efficient and innovative web applications. With a background in mechanical engineering, I bring a unique blend of technical expertise and problem-solving abilities to the table.
-                            <br />
-                            <br />
-                            Throughout my career, I have honed my skills in a wide range of technologies, including JavaScript, React, TypeScript, Node.js, MongoDB, and AWS. My experience spans from designing stylish and accessible user interfaces to developing secure APIs and implementing agile methodologies for continuous value delivery.
-                            <br />
-                            <br />
-                            What sets me apart is my ability to lead projects from conception to successful completion. I thrive in collaborative environments, fostering teamwork and ensuring direct alignment with product owners to deliver high-quality products.
-                        </p>
-                    </div>
-                </div>
-            </ProfileCard>
-            <div className={styles.SkillsAndQualificationsContainer}>
+            <div className={styles.LeftColum}>
                 <ProfileCard>
-                    <div className={styles.SkillsCard}>
-                        <div className={styles.SkillsCardContent}>
-                            <h2 className={styles.CardTitle}>Skills</h2>
-                            <ul className={styles.SkillsList}>
-                                <li><b className={styles.Bold}>Languages:</b> JavaScript, HTML, CSS/SCSS, Python, SQL, JSON, Matlab, Bash</li>
+                    <div className={styles.AboutCard}>
+                        <div className={styles.CardContent}>
+                            <h2 className={styles.CardTitle}>About Me</h2>
+                            <p className={styles.AboutParagraph}>
+                                I'm a highly skilled and versatile software engineer with a passion for creating efficient and innovative web applications. With a background in mechanical engineering, I bring a unique blend of technical and problem-solving abilities to the table.
                                 <br />
-                                <li><b className={styles.Bold}>Libraries & Frameworks:</b> React, TypeScript, MongoDB, Node.js, Express</li>
                                 <br />
-                                <li><b className={styles.Bold}>Tools & Technologies:</b> AWS, Docker, Figma, Jest, Swagger, Cypress, Git, GitHub, Jira</li>
-                            </ul>
+                                My experience spans from designing stylish and accessible user interfaces to developing secure APIs and data management as a software engineer at Raytheon UK.
+                                <br />
+                                <br />
+                                Outside of work I love tennis and films so if you're looking for someone to rally with or catch the newest sci-fi flick thing I'm your guy!
+                            </p>
                         </div>
-
                     </div>
                 </ProfileCard>
-                <div className={styles.SkillsQualSeparator}></div>
                 <ProfileCard>
                     <div className={styles.QualificationsCard}>
-                        <div className={styles.QualCardContent}>
+                        <div className={styles.CardContent}>
                             <h2 className={styles.CardTitle}>Qualifications</h2>
                             <ul className={styles.QualsList}>
-                                <li>AWS CCP</li>
+                                <li className={styles.PillList}>Masters in Mechanical Engineering</li>
                                 <br />
-                                <li>REACT uDemy</li>
+                                <li className={styles.PillList}>AWS Certified Cloud Practitioner</li>
                             </ul>
                         </div>
                     </div>
                 </ProfileCard>
             </div>
-            {/* <section id="projects" className={styles.SectionContainer}></section> */}
+            <div className={styles.RightColum}>
+                <ProfileCard>
+                    <div className={styles.SkillsCard}>
+                        <div className={styles.CardContent}>
+                            <h2 className={styles.CardTitle}>Skills</h2>
+                            <ul className={styles.SkillsList}>
+                                <li className={styles.PillList}>JavaScript</li>
+                                <li className={styles.PillList}>TypeScript</li>
+                                <li className={styles.PillList}>CSS/SCSS</li>
+                                <li className={styles.PillList}>React</li>
+                                <li className={styles.PillList}>MongoDB</li>
+                                <li className={styles.PillList}>Node/Express</li>
+                                <li className={styles.PillList}>SQL</li>
+                                <li className={styles.PillList}>AWS</li>
+                                <li className={styles.PillList}>Docker</li>
+                                <li className={styles.PillList}>Cypress</li>
+                            </ul>
+                        </div>
+                    </div>
+                </ProfileCard>
+                <ProfileCard>
+                    <div className={styles.Experience}>
+                        <div className={styles.CardContent}>
+                            <h2 className={styles.CardTitle}>Experience</h2>
+                            <p className={styles.ExperienceParagraph}>
+                                <b className={styles.ExpTitle}>Software Engineer at Raytheon UK </b>
+                                Full stack software engineer building web applications from inception to deployment.
+                                <br />
+                                <br />
+                                I've worked on multiple projects from internal PTO tracking applications to cyber research projects for clients.
+                                <br />
+                                <br />
+                                I've gained valuable experience like leading diverse teams, delivering quality products and industry level technical skills.
+                            </p>
+                        </div>
+                    </div>
+                </ProfileCard>
+            </div>
+
         </section>
     );
 }

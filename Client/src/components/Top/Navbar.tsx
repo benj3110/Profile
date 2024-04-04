@@ -26,15 +26,6 @@ const Navbar: React.FC = () => {
                         spy={true}
                         smooth={true}
                         offset={-(7 * offsetVh)}
-                        to="projects"
-                        className={styles.Links}>
-                        Projects
-                    </Link>
-                    <Link
-                        activeClass="active"
-                        spy={true}
-                        smooth={true}
-                        offset={-(7 * offsetVh)}
                         to="contacts"
                         className={styles.Links}>
                         Contacts

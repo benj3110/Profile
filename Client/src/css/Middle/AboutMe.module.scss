@@ -1,180 +1,163 @@
-@use "../Base";
+@use "../Text";
 @use "../Colours";
 
-.SectionContainer {
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-start;
-	padding-top: 6vh;
-	flex-direction: row;
-	height: 150vh;
-	width: 73vw;
-	// border-bottom: #272138 solid 2px;
+.CardContent {
+	overflow: hidden;
+	width: 100%;
 }
-
-.SkillsAndQualificationsContainer {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-}
-
-.SkillsQualSeparator {
-	min-height: 2vh;
-}
-
-.AboutCard {
-	width: 40vw;
-	height: 77vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	.AboutCardContent {
-		width: calc(100% - 4rem);
-		height: calc(100% - 4rem);
-		overflow: hidden;
-		.AboutParagraph {
-			display: flex;
-			align-items: center;
-			background: Colours.$backgroundLighterDark;
-			height: calc(100% - 60px);
-			margin-block: 0;
-			padding-left: 1rem;
-			padding-right: 1rem;
-			position: relative;
-			border-radius: 1rem;
-			overflow: hidden;
-		}
-		.AboutParagraph::before {
-			content: "";
-			position: absolute;
-			top: -1px;
-			bottom: -1px;
-			left: -1px;
-			right: -1px;
-			border-radius: 1rem;
-			padding: 2px;
-			background: linear-gradient(
-				to bottom right,
-				#272138,
-				#554f5d,
-				#272138
-			);
-			-webkit-mask: linear-gradient(#fff 0 0) content-box,
-				linear-gradient(#fff 0 0);
-			-webkit-mask-composite: xor;
-			mask-composite: exclude;
-		}
-	}
-}
-
-.SkillsCard {
-	width: 30vw;
-	height: 45vh;
-	min-height: fit-content;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	.SkillsCardContent {
-		width: calc(100% - 4rem);
-		height: calc(100% - 4rem);
-		overflow: hidden;
-		.SkillsList {
-			background: Colours.$backgroundLighterDark;
-			display: flex;
-			justify-content: center;
-			flex-direction: column;
-			height: calc(100% - 60px);
-			margin-block: 0;
-			padding-left: 1rem;
-			padding-right: 1rem;
-			position: relative;
-			border-radius: 1rem;
-			text-decoration: none;
-			overflow: hidden;
-		}
-		.SkillsList::before {
-			content: "";
-			position: absolute;
-			top: -1px;
-			bottom: -1px;
-			left: -1px;
-			right: -1px;
-			border-radius: 1rem;
-			padding: 2px;
-			background: linear-gradient(
-				to bottom right,
-				#272138,
-				#554f5d,
-				#272138
-			);
-			-webkit-mask: linear-gradient(#fff 0 0) content-box,
-				linear-gradient(#fff 0 0);
-			-webkit-mask-composite: xor;
-			mask-composite: exclude;
-		}
-	}
-}
-
-.QualificationsCard {
-	width: 30vw;
-	height: 30vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	.QualCardContent {
-		width: calc(100% - 4rem);
-		height: calc(100% - 4rem);
-		.QualsList {
-			background: Colours.$backgroundLighterDark;
-			display: flex;
-			justify-content: center;
-			flex-direction: column;
-			height: calc(100% - 60px);
-			margin-block: 0;
-			padding-left: 1rem;
-			padding-right: 1rem;
-			position: relative;
-			border-radius: 1rem;
-			overflow: hidden;
-		}
-		.QualsList::before {
-			content: "";
-			position: absolute;
-			top: -1px;
-			bottom: -1px;
-			left: -1px;
-			right: -1px;
-			border-radius: 1rem;
-			padding: 2px;
-			background: linear-gradient(
-				to bottom right,
-				#272138,
-				#554f5d,
-				#272138
-			);
-			-webkit-mask: linear-gradient(#fff 0 0) content-box,
-				linear-gradient(#fff 0 0);
-			-webkit-mask-composite: xor;
-			mask-composite: exclude;
-		}
-	}
-}
-
 .CardTitle {
-	font-size: 2.5rem;
+	font-size: 2.4rem;
 	margin-block: 0;
+	padding-left: 1rem;
+}
+.CardTitleSM {
+	font-size: 1.6rem;
+	margin-block: 0;
+	padding-left: 1rem;
 }
 
 .Bold {
 	font-weight: bolder;
+}
+@mixin CardBeforeStyles {
+	content: "";
+	position: absolute;
+	top: -1px;
+	bottom: -1px;
+	left: -1px;
+	right: -1px;
+	border-radius: 1rem;
+	padding: 2px;
+	background: linear-gradient(to bottom right, #272138, #554f5d, #272138);
+	-webkit-mask: linear-gradient(#fff 0 0) content-box,
+		linear-gradient(#fff 0 0);
+	-webkit-mask-composite: xor;
+	mask-composite: exclude;
+}
+@mixin CardMainContentStyles {
+	display: flex;
+	align-items: center;
+	background: Colours.$backgroundLighterDark;
+	height: min(calc(100% - 60px), fit-content);
+	margin-block: 0;
+	padding: 1rem;
+	position: relative;
+	border-radius: 1rem;
+	overflow: hidden;
 }
 
 li {
 	list-style-type: none;
 	padding: 0;
 	margin: 0;
+}
+
+//specifics
+
+.SectionContainer {
+	padding-top: 8vh;
+	width: 1000px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-content: flex-start;
+	gap: 30px;
+	justify-content: flex-start;
+}
+.LeftColum {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 30px;
+	width: 485px;
+}
+.RightColum {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	width: 485px;
+}
+
+.AboutCard {
+	width: calc(485px - 2rem);
+	height: fit-content;
+	min-height: calc(460px - 2rem);
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	.AboutParagraph {
+		@include CardMainContentStyles;
+	}
+	.AboutParagraph::before {
+		@include CardBeforeStyles;
+	}
+}
+.Experience {
+	width: calc(485px - 2rem);
+	height: fit-content;
+	min-height: calc(405px - 2rem);
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	.ExperienceParagraph {
+		@include CardMainContentStyles;
+		justify-content: center;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.ExperienceParagraph::before {
+		@include CardBeforeStyles;
+	}
+}
+
+.SkillsCard {
+	width: calc(485px - 2rem);
+	height: fit-content;
+	min-height: calc(265px - 2rem);
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	flex-direction: column;
+	.SkillsList {
+		@include CardMainContentStyles;
+
+		align-items: flex-start;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1.2rem;
+	}
+	.SkillsList::before {
+		@include CardBeforeStyles;
+	}
+}
+
+.QualificationsCard {
+	width: calc(485px - 2rem);
+	height: fit-content;
+	min-height: calc(210px - 2rem);
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	flex-direction: column;
+	.QualsList {
+		@include CardMainContentStyles;
+		justify-content: center;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.QualsList::before {
+		@include CardBeforeStyles;
+	}
+}
+
+.PillList {
+	font-size: 1rem;
+	background-image: linear-gradient(to right bottom, #5a3795, #3e2d65);
+	padding: 0.2rem 0.8rem;
+	border-radius: 999px;
+}
+.ExpTitle {
+	font-size: 1.2rem;
+	color: Colours.$lightBlue;
 }
 
 @media (max-width: 700px) {

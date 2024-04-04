@@ -4,7 +4,7 @@
 	padding-top: 10vh;
 	height: 35vh;
 	width: 100vw;
-	margin-top: 50vh;
+	margin-top: 35vh;
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
@@ -53,4 +53,54 @@
 
 .ContactTitle {
 	font-size: 2rem;
+}
+
+.ContactCardContents:hover .tooltip {
+	display: block;
+}
+
+.tooltip {
+	padding: 6px;
+	position: absolute;
+	width: auto;
+	white-space: nowrap;
+	word-wrap: no-wrap;
+	box-shadow: 1px 1px 20px Colours.$bitcoinOrange;
+	border-radius: 13px;
+	background-color: Colours.$bitcoinOrange;
+	color: black;
+	top: -35px;
+	left: 50%;
+	transform: translate(-50%);
+	transform-style: preserve-3d;
+	z-index: 200;
+	font-size: 0.9em;
+	display: none;
+	&:after {
+		content: "";
+		position: absolute;
+		display: block;
+		width: 10px;
+		height: 10px;
+		transform-origin: 50% 50%;
+		transform: rotate(45deg) translateX(-50%);
+		background-color: Colours.$bitcoinOrange;
+		left: 50%;
+		bottom: -8px;
+		z-index: 400;
+	}
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 10px;
+		height: 10px;
+		transform-origin: 50% 50%;
+		transform: rotate(45deg) translateX(-50%) translateZ(-1px);
+		background-color: #fff;
+		left: 50%;
+		bottom: 0px;
+		z-index: -1;
+		box-shadow: -1px -1px 20px #aaa;
+	}
 }
