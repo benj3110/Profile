@@ -4,9 +4,15 @@
 	font-weight: normal;
 	font-style: normal;
 }
+@font-face {
+	font-family: "Cyber";
+	src: url("./public/fonts/GlitchGoblin-2O87v.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
 
 :root {
-	font-family: Inter, "FredokaOne", system-ui, sans-serif;
+	font-family: Inter, "Cyber", "FredokaOne", system-ui, sans-serif;
 	line-height: 1.5;
 	font-weight: bold;
 	overflow-x: hidden;
