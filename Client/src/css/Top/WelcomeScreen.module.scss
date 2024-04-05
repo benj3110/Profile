@@ -10,6 +10,7 @@
 	align-items: center;
 	position: relative;
 	flex-direction: column;
+	text-align: center;
 }
 
 .Name {
@@ -18,8 +19,7 @@
 	font-family: "Cyber";
 	text-shadow: 0 0 0.5rem Colours.$lightBlueGlow;
 	z-index: 1;
-	height: fit-content;
-	width: fit-content;
+	display: flex;
 	margin-top: 6rem;
 	margin-bottom: 2rem;
 }
@@ -35,4 +35,17 @@
 .Animation {
 	width: 500px;
 	height: 400px;
+}
+
+@media (max-width: 700px) {
+	.Name {
+		font-size: 4rem;
+	}
+	.Job {
+		font-size: 1.7rem;
+	}
+	.Animation {
+		width: 400px;
+		height: 350px;
+	}
 }

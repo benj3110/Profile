@@ -10,11 +10,6 @@
 	margin-block: 0;
 	padding-left: 1rem;
 }
-.CardTitleSM {
-	font-size: 1.6rem;
-	margin-block: 0;
-	padding-left: 1rem;
-}
 
 .Bold {
 	font-weight: bolder;
@@ -56,12 +51,18 @@ li {
 
 .SectionContainer {
 	padding-top: 8vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.Content {
 	width: 1000px;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	align-content: flex-start;
 	gap: 30px;
-	justify-content: flex-start;
+	justify-items: center;
 }
 .LeftColum {
 	display: flex;
@@ -160,19 +161,35 @@ li {
 	color: Colours.$lightBlue;
 }
 
-@media (max-width: 700px) {
-	.SectionContainer {
+@media (max-width: 1050px) {
+	.Content {
+		display: flex;
+		justify-content: center;
 		flex-direction: column;
-		height: fit-content;
 		align-items: center;
-		width: 95vw;
+		width: 100dvw;
+	}
+}
+@media (max-width: 550px) {
+	.LeftColum {
+		width: 300px;
+	}
+	.RightColum {
+		width: 300px;
 	}
 	.AboutCard {
-		width: 80vw;
-		height: fit-content;
+		width: calc(300px - 2rem);
+	}
+	.Experience {
+		width: calc(300px - 2rem);
 	}
 	.SkillsCard {
-		width: 80vw;
-		height: fit-content;
+		width: calc(300px - 2rem);
+	}
+	.QualificationsCard {
+		width: calc(300px - 2rem);
+	}
+	.CardTitle {
+		font-size: 1.8rem;
 	}
 }

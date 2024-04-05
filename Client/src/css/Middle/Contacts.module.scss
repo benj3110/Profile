@@ -3,7 +3,7 @@
 .SectionContainer {
 	padding-top: 10vh;
 	height: 35vh;
-	width: 100vw;
+	width: 100%;
 	margin-top: 35vh;
 	display: flex;
 	justify-content: flex-start;
@@ -17,6 +17,7 @@
 		#47b3f0
 	);
 	clip-path: polygon(0 22%, 100% 0, 100% 100%, 0% 100%);
+	text-align: center;
 }
 
 .ContactsHeader {
@@ -29,7 +30,7 @@
 
 .ContactsListContainer {
 	display: flex;
-	width: 20vw;
+	gap: 20px;
 	min-height: fit-content;
 	justify-content: space-around;
 }
@@ -101,5 +102,11 @@
 		bottom: 0px;
 		z-index: -1;
 		box-shadow: -1px -1px 20px #aaa;
+	}
+}
+
+@media (max-width: 1050px) {
+	.SectionContainer {
+		margin-top: 20vh;
 	}
 }
