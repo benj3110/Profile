@@ -43,6 +43,7 @@
 	cursor: pointer;
 	border-radius: 3rem;
 	transition: 0.4s cubic-bezier(0.5, 0.25, 0, 1);
+	color: rgba(255, 255, 255, 0.87);
 	&:hover {
 		color: Colours.$lightBlue;
 		background-color: Colours.$backgroundLighterDark;
