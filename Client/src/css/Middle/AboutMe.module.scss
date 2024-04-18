@@ -10,6 +10,7 @@
 	margin-block: 0;
 	padding-left: 1rem;
 	font-family: "Cyber";
+	color: white;
 }
 
 .Bold {
@@ -40,12 +41,14 @@
 	position: relative;
 	border-radius: 1rem;
 	overflow: hidden;
+	color: white;
 }
 
 li {
 	list-style-type: none;
 	padding: 0;
 	margin: 0;
+	color: white;
 }
 
 //specifics
@@ -156,6 +159,7 @@ li {
 	background-image: linear-gradient(to right bottom, #5a3795, #3e2d65);
 	padding: 0.2rem 0.8rem;
 	border-radius: 999px;
+	color: white;
 }
 .ExpTitle {
 	font-size: 1.2rem;
