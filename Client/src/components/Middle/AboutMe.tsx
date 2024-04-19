@@ -11,15 +11,17 @@ const AboutMe: React.FC = () => {
                         <div className={styles.AboutCard}>
                             <div className={styles.CardContent}>
                                 <h2 className={styles.CardTitle}>About Me</h2>
-                                <p className={styles.AboutParagraph}>
-                                    I'm a highly skilled and versatile software engineer with a passion for creating efficient and innovative web applications. With a background in mechanical engineering, I bring a unique blend of technical and problem-solving abilities to the table.
-                                    <br />
-                                    <br />
-                                    My experience spans from designing stylish and accessible user interfaces to developing secure APIs and data management as a software engineer at Raytheon UK.
-                                    <br />
-                                    <br />
-                                    Outside of work I love tennis and films so if you're looking for someone to rally with or catch the newest sci-fi flick thing I'm your guy!
-                                </p>
+                                <div className={styles.AboutParagraphs}>
+                                    <p className={styles.AboutParagraph}>
+                                        I'm a highly skilled and versatile software engineer with a passion for creating efficient and innovative web applications. With a background in mechanical engineering, I bring a unique blend of technical and problem-solving abilities to the table.
+                                    </p>
+                                    <p className={styles.AboutParagraph}>
+                                        My experience spans from designing stylish and accessible user interfaces to developing secure APIs and data management as a software engineer at Raytheon UK.
+                                    </p>
+                                    <p className={styles.AboutParagraph}>
+                                        Outside of work I love tennis and films so if you're looking for someone to rally with or catch the newest sci-fi flick thing I'm your guy!
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </ProfileCard>
@@ -29,7 +31,6 @@ const AboutMe: React.FC = () => {
                                 <h2 className={styles.CardTitle}>Qualifications</h2>
                                 <ul className={styles.QualsList}>
                                     <li className={styles.PillList}>Masters in Mechanical Engineering</li>
-                                    <br />
                                     <li className={styles.PillList}>AWS Certified Cloud Practitioner</li>
                                 </ul>
                             </div>
@@ -60,16 +61,20 @@ const AboutMe: React.FC = () => {
                         <div className={styles.Experience}>
                             <div className={styles.CardContent}>
                                 <h2 className={styles.CardTitle}>Experience</h2>
-                                <p className={styles.ExperienceParagraph}>
+                                <div className={styles.ExperienceParagraphs}>
                                     <b className={styles.ExpTitle}>Software Engineer at Raytheon UK </b>
-                                    Full stack software engineer building web applications from inception to deployment.
-                                    <br />
-                                    <br />
-                                    I've worked on multiple projects from internal PTO tracking applications to cyber research projects for clients.
-                                    <br />
-                                    <br />
-                                    I've gained valuable experience like leading diverse teams, delivering quality products and industry level technical skills.
-                                </p>
+                                    <p className={styles.ExperienceParagraph}>
+                                        Full stack software engineer building web applications from inception to deployment.
+                                    </p>
+                                    <p className={styles.ExperienceParagraphMargin}>
+                                        I've worked on multiple projects from internal PTO tracking applications to cyber research projects for clients.
+                                    </p>
+                                    <p className={styles.ExperienceParagraph}>
+                                        I've gained valuable experience like leading diverse teams, delivering quality products and industry level technical skills.
+                                    </p>
+
+
+                                </div>
                             </div>
                         </div>
                     </ProfileCard>
