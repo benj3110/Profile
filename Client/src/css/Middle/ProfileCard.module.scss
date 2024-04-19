@@ -16,10 +16,41 @@
 	border-radius: 2rem;
 	overflow: hidden;
 	padding: 1rem;
+	scale: 0.85;
+	opacity: 0.3;
+	animation: fade-in-up cubic-bezier(0, 0, 0.16, 1) forwards;
+	animation-timeline: view();
+	animation-range-start: cover;
+	animation-range-end: entry;
 }
-
 .Card:hover {
 	transform: scale(1.005);
 	border: 0;
 	box-shadow: 0 0.2rem 0.8rem 0.3rem Colours.$lightBlue;
+}
+@keyframes fade-in-up {
+	from {
+		transform: translateY(50px);
+	}
+	to {
+		scale: 1;
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.Card {
+		animation: none;
+		scale: 1;
+		opacity: 1;
+	}
+}
+
+@supports not (animation-timeline: view()) {
+	.Card {
+		animation: none;
+		scale: 1;
+		opacity: 1;
+	}
 }
