@@ -184,17 +184,31 @@ li {
 	}
 	.AboutCard {
 		width: calc(300px - 2rem);
+		.AboutParagraph {
+			text-align: center;
+		}
 	}
 	.Experience {
 		width: calc(300px - 2rem);
+		.ExperienceParagraph {
+			text-align: center;
+		}
 	}
 	.SkillsCard {
 		width: calc(300px - 2rem);
+		.SkillsList {
+			justify-content: center;
+		}
 	}
 	.QualificationsCard {
 		width: calc(300px - 2rem);
+		.QualsList {
+			justify-content: center;
+		}
 	}
 	.CardTitle {
 		font-size: 1.8rem;
+		padding: 0;
+		text-align: center;
 	}
 }
