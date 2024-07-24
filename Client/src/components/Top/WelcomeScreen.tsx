@@ -6,6 +6,7 @@ const WelcomeScreen: React.FC = () => {
 
     return (
         <section id="welcomeScreen" className={styles.WelcomeScreenContainer}>
+            <div className={styles.WelcomeScreenBox}>
             <h1 className={styles.Name}>Benito Varghese</h1>
             <p className={styles.Job}>Full-Stack Software Engineer</p>
             <div className={styles.Background}></div>
@@ -18,6 +19,7 @@ const WelcomeScreen: React.FC = () => {
             >
                 <Controls visible={false} />
             </Player>
+            </div>
         </section >);
 }
 
