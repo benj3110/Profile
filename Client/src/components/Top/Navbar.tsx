@@ -11,32 +11,29 @@ const Navbar: React.FC = () => {
     return (
         <nav className={styles.Navbar}>
             <ul className={styles.LinkContainer}>
-                <div className={styles.MainLinks}>
-                    <Link
-                        activeClass="active"
-                        spy={true}
-                        smooth={true}
-                        to="profile"
-                        offset={-(7 * offsetVh)}
-                        className={styles.Links}>
-                        Profile
-                    </Link>
-                    <Link
-                        activeClass="active"
-                        spy={true}
-                        smooth={true}
-                        offset={-(7 * offsetVh)}
-                        to="contacts"
-                        className={styles.Links}>
-                        Contacts
-                    </Link>
-
-                </div>
-                <div className={styles.Cv}>
+                <Link
+                    activeClass="active"
+                    spy={true}
+                    smooth={true}
+                    to="profile"
+                    offset={-(7 * offsetVh)}
+                    className={styles.Links}>
+                    Profile
+                </Link>
+                <Link
+                    activeClass="active"
+                    spy={true}
+                    smooth={true}
+                    offset={-(7 * offsetVh)}
+                    to="contacts"
+                    className={styles.Links}>
+                    Contacts
+                </Link>
+                <div className={styles.Links}>
                     <Link activeClass="active"
                         spy={true}
                         smooth={true}
-                        to="profile" className={styles.Links}
+                        to="profile" className={styles.Cv}
                         onClick={openCV}>
                         CV
                     </Link>

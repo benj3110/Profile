@@ -13,18 +13,6 @@
 	text-align: center;
 }
 
-// .WelcomeScreenBox{
-// 	// border: white solid 3px;
-// 	// width:65rem;
-// 	// height: 45rem;
-// 	// overflow: hidden;
-// 	// display: flex;
-// 	// justify-content: center;
-// 	// align-items: center;
-// 	// position: relative;
-// 	// flex-direction: column;
-
-// }
 .Name {
 	font-weight: 800;
 	font-size: 6rem;
@@ -52,8 +40,8 @@
 	height: 400px;
 }
 .WelcomeScreenBox {
-	width:65rem;
-	height: 45rem;
+	width: 65rem;
+	height: 80svh;
 	display: grid;
 	place-content: center;
 	overflow: hidden;
@@ -64,41 +52,45 @@
 		from var(--border-angle),
 		#272138,
 		#272138
-	  ); //this is the radar effect gradient, set to just be bg
-	
+	); //this is the radar effect gradient, set to just be bg
+
 	border: solid 5px transparent;
 	border-radius: 2em;
-	--gradient-border: conic-gradient(from var(--border-angle), transparent 25%, #f26e3f, #f03554 99%, transparent);
-	
+	--gradient-border: conic-gradient(
+		from var(--border-angle),
+		transparent 25%,
+		#f26e3f,
+		#f03554 99%,
+		transparent
+	);
+
 	background: 
 	  // padding-box clip this background in to the overall element except the border.
-	  var(--main-bg) padding-box,
-	  // border-box extends this background to the border space
-	  var(--gradient-border) border-box, 
-	  // Duplicate main background to fill in behind the gradient border. You can remove this if you want the border to extend "outside" the box background.
-	  var(--main-bg) border-box;
-	
+		var(--main-bg) padding-box,
+		// border-box extends this background to the border space
+		var(--gradient-border) border-box,
+		// Duplicate main background to fill in behind the gradient border. You can remove this if you want the border to extend "outside" the box background.
+		var(--main-bg) border-box;
+
 	background-position: center center;
-  
+
 	animation: bg-spin 5s linear infinite;
 	@keyframes bg-spin {
-	  to {
-		--border-angle: 1turn;
-	  }
+		to {
+			--border-angle: 1turn;
+		}
 	}
-  }
-  
-  @property --border-angle {
+}
+
+@property --border-angle {
 	syntax: "<angle>";
 	inherits: true;
 	initial-value: 0turn;
-  }
+}
 
-  
 @media (max-width: 1100px) {
-	.WelcomeScreenBox{
-		width:650px;
-		height: 40rem;
+	.WelcomeScreenBox {
+		width: 650px;
 	}
 	.Name {
 		font-size: 5rem;
@@ -115,15 +107,14 @@
 }
 
 @media (max-width: 700px) {
-	.WelcomeScreenBox{
-		width:365px;
+	.WelcomeScreenBox {
+		width: 365px;
 	}
 	.Name {
 		font-size: 3rem;
 	}
 	.Job {
 		font-size: 1.6rem;
-	
 	}
 	.Animation {
 		width: 360px;
@@ -132,8 +123,8 @@
 }
 
 @media (max-width: 400px) {
-	.WelcomeScreenBox{
-		width:300px;
+	.WelcomeScreenBox {
+		width: 300px;
 	}
 	.Name {
 		font-size: 3rem;
@@ -145,6 +136,4 @@
 		width: 300px;
 		height: 300px;
 	}
-
 }
-
