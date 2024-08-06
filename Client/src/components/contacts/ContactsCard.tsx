@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import styles from '../../css/Middle/ContactsCard.module.scss';
+import styles from './ContactsCard.module.scss';
 
 const ContactsCard: React.FC<{ children: ReactNode }> = ({ children }) => {
 

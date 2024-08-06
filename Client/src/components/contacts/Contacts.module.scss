@@ -1,37 +1,26 @@
-@use "../Colours";
+@use "../../baseCSS/Colours";
 
 .SectionContainer {
-	padding-top: 10svh;
-
+	padding-bottom: 1rem;
 	width: 100%;
-
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
 	flex-direction: column;
-	background-image: linear-gradient(
-		to left bottom,
-		#615ab3,
-		#5179ce,
-		#4597e1,
-		#47b3f0
-	);
-	clip-path: polygon(0 22%, 100% 0, 100% 100%, 0% 100%);
+	// background-image: linear-gradient(
+	// 	to left bottom,
+	// 	#615ab3,
+	// 	#5179ce,
+	// 	#4597e1,
+	// 	#47b3f0
+	// );
+	// clip-path: polygon(0 22%, 100% 0, 100% 100%, 0% 100%);
 	text-align: center;
-}
-
-.ContactsHeader {
-	color: Colours.$bitcoinOrange;
-	margin-block: 0;
-	font-family: "Cyber";
-}
-.ContactsParagraph {
-	font-size: 1.3rem;
-	color: white;
 }
 
 .ContactsListContainer {
 	display: flex;
+	flex-direction: column;
 	gap: 20px;
 	min-height: fit-content;
 	justify-content: space-around;
@@ -53,10 +42,6 @@
 	cursor: pointer;
 }
 
-.ContactTitle {
-	font-size: 2rem;
-}
-
 .ContactCardContents:hover .tooltip {
 	display: block;
 }
@@ -67,9 +52,9 @@
 	width: auto;
 	white-space: nowrap;
 	word-wrap: no-wrap;
-	box-shadow: 1px 1px 20px Colours.$bitcoinOrange;
+	box-shadow: 1px 1px 20px Colours.$loadingOrange;
 	border-radius: 13px;
-	background-color: Colours.$bitcoinOrange;
+	background-color: Colours.$loadingOrange;
 	color: black;
 	top: -35px;
 	left: 50%;
@@ -86,7 +71,7 @@
 		height: 10px;
 		transform-origin: 50% 50%;
 		transform: rotate(45deg) translateX(-50%);
-		background-color: Colours.$bitcoinOrange;
+		background-color: Colours.$loadingOrange;
 		left: 50%;
 		bottom: -8px;
 		z-index: 400;

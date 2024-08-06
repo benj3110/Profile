@@ -1,20 +1,16 @@
-@use "../Colours";
+@use "../../baseCSS/Colours";
 
-.Screen{
-	display: flex;
-	width: 100%;
-}
 .WelcomeScreenContainer {
-	width: 80%;
+	width: 100%;
 	height: 100svh;
 	background-color: Colours.$backgroundLighterDark;
-// 	overflow: hidden;
+	// 	overflow: hidden;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-// 	position: relative;
-// 	flex-direction: column;
-// 	text-align: center;
+	// 	position: relative;
+	// 	flex-direction: column;
+	// 	text-align: center;
 }
 
 .Name {

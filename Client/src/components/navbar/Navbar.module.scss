@@ -1,0 +1,157 @@
+@use "../../baseCSS/Colours";
+@use "../../baseCSS/Text";
+.Navbar {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+	width: 15%;
+	min-width: 250px;
+	height: 100svh;
+	background-color: Colours.$backgroundDark;
+	position: sticky;
+	z-index: 1;
+	top: 0;
+}
+
+.LinksContainer {
+	width: 100%;
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	padding: 0;
+	padding-top: 8rem;
+	margin: 0;
+	transition: width 0.4s ease;
+	gap: 0.5rem;
+}
+.LinkContainer {
+	display: flex;
+}
+
+.Links {
+	text-align: center;
+	font-size: Text.$textXXXS;
+	padding: 0;
+	margin: 0;
+	max-width: 150px;
+	width: 300px;
+	height: 100%;
+	cursor: pointer;
+	border-radius: 3rem;
+	transition: 0.2s cubic-bezier(0.5, 0.25, 0, 1);
+	color: white;
+
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	&:after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border-radius: 3rem;
+		z-index: -2;
+	}
+	&:before {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0%;
+		height: 100%;
+		background-color: Colours.$tropicalSea;
+		transition: 0.4s cubic-bezier(0.5, 0.25, 0, 1);
+		transition-delay: 0.05s;
+		border-radius: 3rem;
+		z-index: -1;
+	}
+	&:hover {
+		color: #fff;
+		&:before {
+			width: 100%;
+		}
+	}
+}
+.active {
+	background-color: Colours.$tropicalSea;
+}
+.Cv {
+	background-color: Colours.$solidBlue;
+	border-radius: 3rem;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.2s cubic-bezier(0.5, 0.25, 0, 1);
+	color: #fff;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	&:after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: Colours.$solidBlue;
+		border-radius: 3rem;
+		z-index: -2;
+	}
+	&:before {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0%;
+		height: 100%;
+		background-color: Colours.$loadingOrange;
+		transition: 0.4s cubic-bezier(0.5, 0.25, 0, 1);
+		transition-delay: 0.05s;
+		border-radius: 3rem;
+		z-index: -1;
+	}
+	&:hover {
+		color: #fff;
+		&:before {
+			width: 100%;
+		}
+	}
+}
+// .LinkBar {
+// 	width: 40px;
+// 	height: 3px;
+// 	// background-color: Colours.$tropicalSea;
+// 	top: 50%;
+// 	margin-top: auto;
+// 	margin-bottom: auto;
+// }
+// .LinkBarCV {
+// 	width: 40px;
+// 	height: 3px;
+// 	// background-color: Colours.$solidBlue;
+// 	top: 50%;
+// 	margin-top: auto;
+// 	margin-bottom: auto;
+// 	transition: 0.1s cubic-bezier(0.5, 0.25, 0, 1);
+// }
+// .LinkContainer:has(.Cv:hover) .LinkBarCV {
+// 	background-color: #f26e3f;
+// }
+// .LinkContainer:has(.Cv:not(:hover)) .LinkBarCV {
+// 	transition: 0.1s cubic-bezier(0.5, 0.25, 0, 1);
+// 	transition-delay: 0.4s;
+// }
+// .LinkContainer:has(.Links:hover) .LinkBar {
+// 	background-color: Colours.$tropicalSea;
+// }
+// .LinkContainer:has(.Links:not(:hover)) .LinkBar {
+// 	transition: 0.1s cubic-bezier(0.5, 0.25, 0, 1);
+// 	transition-delay: 0.4s;
+// }

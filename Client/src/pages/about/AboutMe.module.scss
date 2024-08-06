@@ -1,5 +1,5 @@
-@use "../Text";
-@use "../Colours";
+@use "../../baseCSS/Text";
+@use "../../baseCSS/Colours";
 
 .CardContent {
 	overflow: hidden;
@@ -56,8 +56,8 @@ li {
 
 .SectionContainer {
 	width: 100%;
+	height: 100svh;
 	display: flex;
-
 }
 .Content {
 	width: 80%;

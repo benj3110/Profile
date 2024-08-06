@@ -1,14 +1,12 @@
 import { ContactsList, Email } from "../../data/ContactsList";
 import ContactsCard from "./ContactsCard";
-import styles from "../../css/Middle/Contacts.module.scss"
+import styles from "./Contacts.module.scss"
 import { useState } from "react";
 
 const Contacts: React.FC = () => {
     const [isCopied, setIsCopied] = useState("Copy");
     return (
         <section id="contacts" className={styles.SectionContainer}>
-            <h1 className={styles.ContactsHeader}>Contact Me</h1>
-            <p className={styles.ContactsParagraph}>Want to talk tech or just say hi? Get in touch and make a new connection! </p>
             <div className={styles.ContactsListContainer}>
                 <ContactsCard>
                     <div

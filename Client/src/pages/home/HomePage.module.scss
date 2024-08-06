@@ -1,8 +1,7 @@
-@use "Colours";
+@use "../../baseCSS/Colours";
 
 .PageContainer {
-	display: grid;
-	place-items: center;
+	display: flex;
 	width: 100dvw;
 	min-width: 325px;
 	margin: 0;
@@ -15,4 +14,10 @@
 		#46316d,
 		#3c2e60
 	);
+}
+.PageContent {
+	width: 85%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
 }
