@@ -1,11 +1,12 @@
 import ProfileCard from "./ProfileCard";
 import styles from "../../css/Middle/AboutMe.module.scss"
+import Navbar from "../Top/Navbar";
 
 const AboutMe: React.FC = () => {
     return (
         <section className={styles.SectionContainer} id="profile">
+            <Navbar />
             <div className={styles.Content}>
-
                 <div className={styles.LeftColum}>
                     <ProfileCard>
                         <div className={styles.AboutCard}>

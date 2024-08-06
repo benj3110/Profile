@@ -1,12 +1,13 @@
 // import { useEffect, useState } from "react";
 import styles from "../../css/Top/Navbar.module.scss"
 import { Link } from "react-scroll";
+import Contacts from "../Middle/Contacts";
 const Navbar: React.FC = () => {
     const openCV = () => {
         const pdfUrl = "/BenitoVargheseCV.pdf";
         window.open(pdfUrl, "_blank");
     }
-    const offsetVh = window.innerHeight / 100;
+    // const offsetVh = window.innerHeight / 100;
     //todo active class styling
     return (
         <nav className={styles.Navbar}>
@@ -16,7 +17,7 @@ const Navbar: React.FC = () => {
                     spy={true}
                     smooth={true}
                     to="profile"
-                    offset={-(7 * offsetVh)}
+
                     className={styles.Links}>
                     Profile
                 </Link>
@@ -24,7 +25,7 @@ const Navbar: React.FC = () => {
                     activeClass="active"
                     spy={true}
                     smooth={true}
-                    offset={-(7 * offsetVh)}
+
                     to="contacts"
                     className={styles.Links}>
                     Contacts
@@ -39,6 +40,7 @@ const Navbar: React.FC = () => {
                     </Link>
                 </div>
             </ul>
+            <Contacts />
         </nav>);
 }
 
