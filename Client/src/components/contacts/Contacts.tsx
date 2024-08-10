@@ -6,7 +6,7 @@ import { useState } from "react";
 const Contacts: React.FC = () => {
     const [isCopied, setIsCopied] = useState("Copy");
     return (
-        <section id="contacts" className={styles.SectionContainer}>
+        <section id="contactsNav" className={styles.SectionContainer}>
             <div className={styles.ContactsListContainer}>
                 <ContactsCard>
                     <div

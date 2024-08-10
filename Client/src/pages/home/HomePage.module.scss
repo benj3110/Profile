@@ -6,14 +6,12 @@
 	min-width: 325px;
 	margin: 0;
 	padding: 0;
-	background-image: linear-gradient(
-		to left bottom,
-		#6c3893,
-		#5e3687,
-		#52347a,
-		#46316d,
-		#3c2e60
-	);
+	// background-image: linear-gradient(
+	// 	to left bottom,
+	// 	#061d39,
+	// 	#131e2b
+	// );
+	background-color: Colours.$basebg;
 }
 .PageContent {
 	width: 85%;

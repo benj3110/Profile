@@ -1,7 +1,6 @@
 @use "../../baseCSS/Colours";
-
+@use "../../baseCSS/Text";
 .SectionContainer {
-	padding-bottom: 1rem;
 	width: 100%;
 	display: flex;
 	justify-content: flex-start;
@@ -61,7 +60,7 @@
 	transform: translate(-50%);
 	transform-style: preserve-3d;
 	z-index: 200;
-	font-size: 0.9em;
+	font-size: Text.$textMobileMD;
 	display: none;
 	&:after {
 		content: "";

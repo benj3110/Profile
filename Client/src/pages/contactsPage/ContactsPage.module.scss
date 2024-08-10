@@ -1,0 +1,47 @@
+@use "../../baseCSS/Text";
+@use "../../baseCSS/Colours";
+
+.SectionContainer {
+	width: 100%;
+	height: 100svh;
+	display: flex;
+	align-items: center;
+	border: 1px red solid;
+}
+.TitleContainer{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-bottom: 15rem;
+}
+.Title{
+	font-weight: 800;
+	font-size: Text.$text2XL;
+	font-family: "Cyber";
+	text-shadow: 0 0 0.5rem Colours.$lightBlueGlow;
+	z-index: 1;
+	color: white;
+	margin-block: 0;
+	padding-left: 3rem;
+}
+// .TitleUnderLine{
+// height: 10px;
+// width: 50px;
+// // background-image: linear-gradient(
+// // 		to left,
+// // 	transparent 25%,
+// // 	#f26e3f,
+// // 	#f03554 99%,
+// // 	transparent
+// // );
+// }
+
+.ContactMeTagline{
+	margin-block: 0;
+	padding-left: 3rem;
+	padding-top: 0.2rem;
+	font-size: Text.$textXS;
+	width: 450px;
+	text-wrap: wrap;
+	color: Colours.$lightBlue;
+}

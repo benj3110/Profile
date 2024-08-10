@@ -1,14 +1,15 @@
 @use "../../baseCSS/Colours";
 @use "../../baseCSS/Text";
+
 .Navbar {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: flex-start;
 	width: 15%;
 	min-width: 250px;
 	height: 100svh;
-	background-color: Colours.$backgroundDark;
+	background-color: Colours.$basebg;
 	position: sticky;
 	z-index: 1;
 	top: 0;
@@ -22,16 +23,19 @@
 	justify-content: space-around;
 	align-items: center;
 	padding: 0;
-	padding-top: 8rem;
 	margin: 0;
+	margin-bottom: 9rem;
 	transition: width 0.4s ease;
 	gap: 0.5rem;
 }
 .LinkContainer {
-	display: flex;
+	height: 35px;
 }
 
 .Links {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	text-align: center;
 	font-size: Text.$textXXXS;
 	padding: 0;
@@ -79,6 +83,7 @@
 }
 .active {
 	background-color: Colours.$tropicalSea;
+	transition: 0.2s cubic-bezier(0.5, 0.25, 0, 1);
 }
 .Cv {
 	background-color: Colours.$solidBlue;

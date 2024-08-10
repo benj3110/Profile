@@ -7,7 +7,9 @@ const WelcomeScreen: React.FC = () => {
     return (
         <section id="welcomeScreen" className={styles.WelcomeScreenContainer}>
             <div className={styles.WelcomeScreenBox}>
-                <h1 className={styles.Name}>Benito Varghese</h1>
+                <div className={styles.Glitchwrapper}>
+                    <h1 className={styles.Glitch}>Benito Varghese</h1>
+                </div>
                 <p className={styles.Job}>Full-Stack Software Engineer</p>
                 <div className={styles.Background}></div>
                 <Player

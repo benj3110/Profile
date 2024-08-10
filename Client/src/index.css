@@ -15,8 +15,11 @@
 	font-family: Inter, "Cyber", "FredokaOne", system-ui, sans-serif;
 	line-height: 1.5;
 	font-weight: bold;
-	overflow-x: hidden;
+	/* overflow: hidden; */
+	overflow-y: scroll;
+	scrollbar-width: none;
 	color-scheme: light dark;
+	-ms-overflow-style: none;
 	color: white;
 	background-color: #fcefdf;
 	font-synthesis: none;
@@ -31,11 +34,13 @@ body {
 	place-items: center;
 	min-width: 320px;
 	min-height: 100vh;
-
 	justify-content: center;
 	align-items: flex-start;
 }
-
+::-webkit-scrollbar {
+    width: 0;  
+    background: transparent;  
+}
 h1 {
 	font-size: 3.2em;
 	line-height: 1.1;

@@ -1,11 +1,37 @@
-import ProfileCard from "./ProfileCard";
+// import ProfileCard from "./ProfileCard";
+import { useNavigate } from "react-router-dom";
 import styles from "./AboutMe.module.scss"
-// import Navbar from "../navbar/Navbar";
 
 const AboutMe: React.FC = () => {
+    const navigate = useNavigate();
+
     return (
         <section className={styles.SectionContainer} id="profile">
-            {/* <Navbar /> */}
+            <div className={styles.TitleContainer}>
+                <h1 className={`${styles.Title} ${styles.A}`}>About</h1>
+                <h1 className={`${styles.Title} ${styles.B}`}>Me</h1>
+                <div className={styles.TitleUnderLine} />
+                <p className={styles.AboutMeTagline}>I love creative problem solving, continuous learning & a bunch of other things!</p>
+                <div
+                    className={styles.LearnButton}
+                    onClick={() => navigate("/about")}>
+                    Learn More
+                </div>
+            </div>
+            <div >
+            </div>
+            {/* <ProfileCard>
+                <div className={styles.QualificationsCard}>
+                    <div className={styles.CardContent}>
+                        <h2 className={styles.CardTitle}>Qualifications</h2>
+                        <ul className={styles.QualsList}>
+                            <li className={styles.PillList}>Masters in Mechanical Engineering</li>
+                            <li className={styles.PillList}>AWS Certified Cloud Practitioner</li>
+                        </ul>
+                    </div>
+                </div>
+            </ProfileCard> */}
+            {/* 
             <div className={styles.Content}>
                 <div className={styles.LeftColum}>
                     <ProfileCard>
@@ -80,7 +106,7 @@ const AboutMe: React.FC = () => {
                         </div>
                     </ProfileCard>
                 </div>
-            </div>
+            </div> */}
 
         </section>
     );
