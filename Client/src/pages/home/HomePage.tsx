@@ -3,7 +3,7 @@ import WelcomeScreen from "../welcome/WelcomeScreen";
 import styles from "./HomePage.module.scss"
 import AboutMe from "../aboutIntro/AboutMe";
 import Navbar from "../../components/navbar/Navbar";
-import ContactsPage from "../contactsPage/contactsPage";
+import ContactsPage from "../contactsPage/ContactsPage";
 
 const HomePage: React.FC = () => {
     return (<div className={styles.PageContainer}>

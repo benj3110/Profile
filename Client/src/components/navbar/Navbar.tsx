@@ -1,23 +1,23 @@
 // import { useEffect, useState } from "react";
 import styles from "./Navbar.module.scss"
-import { Link, Events, animateScroll as scroll } from "react-scroll";
+import { Link, } from "react-scroll";
 import Contacts from "../contacts/Contacts";
-import { useEffect, useState } from "react";
+
 const Navbar: React.FC = () => {
     const openCV = () => {
         const pdfUrl = "/BenitoVargheseCV.pdf";
         window.open(pdfUrl, "_blank");
     }
-    const [offset, setOffset] = useState(0);
+    // const [offset, setOffset] = useState(0);
 
-    useEffect(() => {
-        const onScroll = () => scroll.scrollTo(3000);
-        // clean up code
-        window.removeEventListener('scroll', onScroll);
-        window.addEventListener('scroll', onScroll, { passive: true });
-        console.log(offset)
-        return () => window.removeEventListener('scroll', onScroll);
-    });
+    // useEffect(() => {
+    //     const onScroll = () => scroll.scrollTo(3000);
+    //     // clean up code
+    //     window.removeEventListener('scroll', onScroll);
+    //     window.addEventListener('scroll', onScroll, { passive: true });
+    //     console.log(offset)
+    //     return () => window.removeEventListener('scroll', onScroll);
+    // });
     // const offsetVh = window.innerHeight / 100;
     //todo active class styling
     return (
