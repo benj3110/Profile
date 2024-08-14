@@ -7,7 +7,7 @@ const AboutMe: React.FC = () => {
 
     return (
         <section className={styles.SectionContainer} id="profile">
-            <div className={styles.TitleContainer}>
+            <div className={styles.Titlewrapper}>
                 <h1 className={`${styles.Title} ${styles.A}`}>About</h1>
                 <h1 className={`${styles.Title} ${styles.B}`}>Me</h1>
                 <div className={styles.TitleUnderLine} />
