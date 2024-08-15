@@ -4,38 +4,30 @@
 .WelcomeScreenContainer {
 	width: 100%;
 	height: 100svh;
-
-	//background-color: Colours.$backgroundLighterDark;
-	// 	overflow: hidden;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	// 	position: relative;
-	// 	flex-direction: column;
-	// 	text-align: center;
+
 }
 
-// .Name {
-// 	font-weight: 800;
-// 	font-size: Text.$text2XL;
-// 	font-family: "Cyber";
-// 	text-shadow: 0 0 0.5rem Colours.$lightBlueGlow;
-// 	z-index: 1;
-// 	display: flex;
-// 	justify-content: center;
-// 	margin-top: 5rem;
-// 	margin-bottom: 2rem;
-// 	color: white;
-// 	max-width: 100%;
-// }
 
 .Job {
 	font-size: 2.8rem;
 	color: Colours.$lightBlue;
-	text-shadow: 0 0 0.2rem Colours.$lightBlueGlow;
+	// text-shadow: 0 0 0.2rem Colours.$lightBlueGlow;
 	z-index: 1;
 	margin-top: 1rem;
 	margin-bottom: 1rem;
+	animation: jobAni 2s linear forwards;
+}
+@keyframes jobAni{
+	0%{
+		opacity: 0.1;
+	}
+	100%{
+		opacity: 1;
+		text-shadow: 0 0 0.3rem Colours.$lightBlueGlow;
+	}
 }
 .Animation {
 	width: 500px;
@@ -115,13 +107,14 @@
   position: absolute;
   top: 0;
   text-shadow: 0 0 0.3rem rgba(255, 166, 0, 0);
-	-webkit-text-stroke-width: 2px;
-	-webkit-text-stroke-color: Colours.$loadingOrange;
+	-webkit-text-stroke-width: 1.5px;
+	-webkit-text-stroke-color: Colours.$lightBlue;
     animation-name: Name-animation;
-    animation-duration: 15s;
+    animation-duration: 3.5s;
     animation-timing-function: linear;
     animation-delay: 0s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: 1;
+	animation-fill-mode: forwards;
     animation-direction: alternate-reverse;
   }
 
@@ -133,12 +126,27 @@
 	$steps: 50;
 	
 	@for $i from 0 through $steps {
-	  $step-percentage: percentage(math.div($i, $steps));
-	  $position1: $i * math.div(102%, $steps);
-	  $position2: calc(99% - #{$position1});
+	  $step-percentage: calc(percentage(math.div($i, $steps)));
+	  $position2: $i * math.div(100%, $steps) - 2;
+	//   $position1: calc(99% - #{$position2});
   
 	  #{$step-percentage} {
-		clip-path: inset(0px #{$position2} 0px #{$position1});
+		clip-path: inset(0px #{$position2} 0px 0);
 	  }
 	}
   }
+
+//old moving rectangle border    
+//   @keyframes Name-animation{
+// 	$steps: 50;
+	
+// 	@for $i from 0 through $steps {
+// 	  $step-percentage: percentage(math.div($i, $steps));
+// 	  $position1: $i * math.div(102%, $steps);
+// 	  $position2: calc(99% - #{$position1});
+  
+// 	  #{$step-percentage} {
+// 		clip-path: inset(0px #{$position2} 0px #{$position1});
+// 	  }
+// 	}
+//   }

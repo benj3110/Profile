@@ -11,7 +11,7 @@ const AboutMe: React.FC = () => {
                 <h1 className={`${styles.Title} ${styles.A}`}>About</h1>
                 <h1 className={`${styles.Title} ${styles.B}`}>Me</h1>
                 <div className={styles.TitleUnderLine} />
-                <p className={styles.AboutMeTagline}>I love creative problem solving, continuous learning & a bunch of other things!</p>
+                <p className={styles.AboutMeTagline}>I love creative problem solving, learning & a bunch of other things!</p>
                 <div
                     className={styles.LearnButton}
                     onClick={() => navigate("/about")}>

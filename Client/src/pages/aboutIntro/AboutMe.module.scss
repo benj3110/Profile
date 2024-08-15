@@ -24,7 +24,10 @@
 	color: white;
 	margin-block: 0;
 	padding-left: 3rem;
-	animation: blink linear infinite 2s;
+
+}
+.A{
+	animation: blink cubic-bezier( 0.6, 0.74, 0.19, 0.98 )infinite 6s;
 }
 // .TitleUnderLine{
 // height: 10px;
@@ -54,7 +57,7 @@
 	justify-content: center;
 	margin-left: 3rem;
 	margin-top: 1.4rem;
-	padding: 1rem 2rem;
+	padding: 1rem 1.3rem;
 	border-radius: 3rem;
 	background-color: Colours.$tropicalSea;
 	box-shadow: 0 0 8px 1px Colours.$lightBlueGlow;
@@ -62,8 +65,7 @@
 	color: black;
 	font-weight: 800;
 	font-size: Text.$textXXXS;
-	// width: min-content;
-	// height: min-content;
+	width: 150px;
 	transition: all 0.2s ease-in-out;
 	cursor: pointer;
 	&:hover {
@@ -73,24 +75,16 @@
 }
 
   
-  
-  @keyframes blink{
-	78% {
-		color: inherit;
-		text-shadow: inherit;
-	  }
-	79%{
-		color: #333;
-	 }
-	 80% {
-	   
-	   text-shadow: none;
-	 } 
-	 81% {
-		color: inherit;
-		text-shadow: inherit;
-	  }
-  }
+@keyframes blink {
+	0%, 19.999%, 22%,39.999%,41%, 62.999%, 64%, 64.999%, 73%, 100% {
+		//text-shadow: none;
+    opacity: .99;
+		
+	}
+	20%, 21.999%,40%,40.99%, 63%, 63.999%, 65%, 72.999% {
+		opacity: 0.1;
+	}
+}
 
 
 

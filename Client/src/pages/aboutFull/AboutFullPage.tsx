@@ -5,9 +5,9 @@ const AboutFullPage = () => {
         <div className={styles.PageContainer}>
             <Navbar />
             <div className={styles.PageContent}>
-                <div className={`${styles.Glitchwrapper}`} data-text="about me">
-                    <h1 className={` ${styles.Glitch} `}>
-                        about me
+                <div className={`${styles.Titlewrapper}`} data-text="about me">
+                    <h1 className={` ${styles.Title} `}>
+                        About Me
                     </h1>
                 </div>
             </div>

@@ -18,191 +18,21 @@ background-color: Colours.$basebg;
 }
 
   
-  .Glitchwrapper {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+.Titlewrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0.5rem;
 
-  }
-  .Glitchwrapper h1.Glitch {
-    // color: white;
-    // font-family: sans-serif;
-    // font-weight: 800;
-    // font-size: 100px;
-    padding: 30px;
-    position: relative;
-    font-weight: 800;
-    font-size: Text.$text2XL;
-    font-family: "Cyber";
-    text-shadow: 0 0 0.5rem Colours.$lightBlueGlow;
-    color: white;
-    margin-block: 0;
-    
-  }
-  .Glitchwrapper h1.Glitch::before, .Glitchwrapper h1.Glitch::after {
-    padding: 30px;
-    color: white;
-    content: "about me";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    // background-color: black;
-    overflow: hidden;
-    top: 0;
-  }
-  .Glitchwrapper h1.Glitch::before {
-    left: 3px;
-    text-shadow: -2px 0 red;
-    animation-name: Glitch-animation-1;
-    animation-duration: 2s;
-    animation-timing-function: linear;
-    animation-delay: 0s;
-    animation-iteration-count: 2;
-    animation-direction: reverse-alternate;
-    animation-fill-mode: forwards;
-  }
-  .Glitchwrapper h1.Glitch::after {
-    left: -3px;
-    text-shadow: -2px 0 blue;
-    animation-name: Glitch-animation-2;
-    animation-duration: 2s;
-    animation-timing-function: linear;
-    animation-delay: 0s;
-    animation-iteration-count: 2;
-    animation-direction: reverse-alternate;
-    animation-fill-mode: forwards;
-  }
-  
-  @keyframes Glitch-animation-1 {
-    0% {
-      clip: rect(142px, 550px, 81px, 30px);
-    }
-    5% {
-      clip: rect(97px, 550px, 108px, 30px);
-    }
-    10% {
-      clip: rect(21px, 550px, 131px, 30px);
-    }
-    15% {
-      clip: rect(113px, 550px, 34px, 30px);
-    }
-    20% {
-      clip: rect(127px, 550px, 111px, 30px);
-    }
-    25% {
-      clip: rect(1px, 550px, 12px, 30px);
-    }
-    30% {
-      clip: rect(97px, 550px, 53px, 30px);
-    }
-    35% {
-      clip: rect(63px, 550px, 103px, 30px);
-    }
-    40% {
-      clip: rect(98px, 550px, 16px, 30px);
-    }
-    45% {
-      clip: rect(132px, 550px, 53px, 30px);
-    }
-    50% {
-      clip: rect(87px, 550px, 50px, 30px);
-    }
-    55% {
-      clip: rect(113px, 550px, 81px, 30px);
-    }
-    60% {
-      clip: rect(113px, 550px, 122px, 30px);
-    }
-    65% {
-      clip: rect(39px, 550px, 82px, 30px);
-    }
-    70% {
-      clip: rect(45px, 550px, 21px, 30px);
-    }
-    75% {
-      clip: rect(91px, 550px, 141px, 30px);
-    }
-    80% {
-      clip: rect(5px, 550px, 51px, 30px);
-    }
-    85% {
-      clip: rect(6px, 550px, 85px, 30px);
-    }
-    90% {
-      clip: rect(135px, 550px, 104px, 30px);
-    }
-    95% {
-      clip: rect(65px, 550px, 93px, 30px);
-    }
-    100% {
-      clip: rect(121px, 550px, 45px, 30px);
-    }
-  }
-  @keyframes Glitch-animation-2 {
-    0% {
-      clip: rect(111px, 550px, 62px, 30px);
-    }
-    5% {
-      clip: rect(148px, 550px, 107px, 30px);
-    }
-    10% {
-      clip: rect(125px, 550px, 104px, 30px);
-    }
-    15% {
-      clip: rect(85px, 550px, 105px, 30px);
-    }
-    20% {
-      clip: rect(95px, 550px, 140px, 30px);
-    }
-    25% {
-      clip: rect(13px, 550px, 141px, 30px);
-    }
-    30% {
-      clip: rect(63px, 550px, 116px, 30px);
-    }
-    35% {
-      clip: rect(86px, 550px, 120px, 30px);
-    }
-    40% {
-      clip: rect(100px, 550px, 42px, 30px);
-    }
-    45% {
-      clip: rect(49px, 550px, 134px, 30px);
-    }
-    50% {
-      clip: rect(38px, 550px, 26px, 30px);
-    }
-    55% {
-      clip: rect(31px, 550px, 34px, 30px);
-    }
-    60% {
-      clip: rect(138px, 550px, 123px, 30px);
-    }
-    65% {
-      clip: rect(11px, 550px, 65px, 30px);
-    }
-    70% {
-      clip: rect(106px, 550px, 147px, 30px);
-    }
-    75% {
-      clip: rect(25px, 550px, 35px, 30px);
-    }
-    80% {
-      clip: rect(16px, 550px, 140px, 30px);
-    }
-    85% {
-      clip: rect(84px, 550px, 44px, 30px);
-    }
-    90% {
-      clip: rect(113px, 550px, 137px, 30px);
-    }
-    95% {
-      clip: rect(37px, 550px, 38px, 30px);
-    }
-    100% {
-      clip: rect(14px, 550px, 92px, 30px);
-    }
-  }
-  
+}
+.Titlewrapper h1.Title {
+  position: relative;
+  font-weight: 800;
+  font-size: Text.$text2XL;
+  font-family: "Cyber";
+  text-shadow: 0 0 0.5rem Colours.$lightBlueGlow;
+  color: white;
+  margin-block: 0;
+  margin: 0;
+  overflow: visible; 
+}
