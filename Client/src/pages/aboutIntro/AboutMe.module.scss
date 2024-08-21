@@ -6,14 +6,14 @@
 	width: 100%;
 	height: 100svh;
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	border: 1px red solid;
 }
-.Titlewrapperr{
+.Titlewrapper{
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	margin-bottom: 15rem;
+	margin-top: 15rem;
 }
 .Title{
 	font-weight: 800;
@@ -29,17 +29,19 @@
 .A{
 	animation: blink cubic-bezier( 0.6, 0.74, 0.19, 0.98 )infinite 6s;
 }
-// .TitleUnderLine{
-// height: 10px;
-// width: 50px;
-// // background-image: linear-gradient(
-// // 		to left,
-// // 	transparent 25%,
-// // 	#f26e3f,
-// // 	#f03554 99%,
-// // 	transparent
-// // );
-// }
+.TitleUnderLine{
+height: 5px;
+width: 600px;
+margin-left: 3rem;
+border-radius: 1rem;
+background-image: linear-gradient(
+		to left,
+	transparent 25%,
+	Colours.$lightBlueGlow ,
+	white 100%,
+	transparent
+);
+}
 
 .AboutMeTagline{
 	margin-block: 0;

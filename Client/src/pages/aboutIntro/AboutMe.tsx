@@ -18,8 +18,6 @@ const AboutMe: React.FC = () => {
                     Learn More
                 </div>
             </div>
-            <div >
-            </div>
             {/* <ProfileCard>
                 <div className={styles.QualificationsCard}>
                     <div className={styles.CardContent}>

@@ -5,7 +5,8 @@ const ContactsPage = () => {
             <h1 className={styles.Title}>Get in</h1>
             <h1 className={styles.Title}>Touch</h1>
             <div className={styles.TitleUnderLine} />
-            <span className={styles.ContactMeTagline}>benitovk@gmail</span>
+            <span className={styles.ContactMeTagline}>Email</span>
+            <span className={styles.ContactMeTagline}>LindedIn</span>
         </div>
     </section>);
 }
