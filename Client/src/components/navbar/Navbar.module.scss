@@ -35,6 +35,7 @@
 .Links {
 	display: flex;
 	justify-content: center;
+	text-decoration: none;
 	align-items: center;
 	text-align: center;
 	font-size: Text.$textXXXS;
@@ -87,6 +88,7 @@
 }
 .Cv {
 	background-color: Colours.$solidBlue;
+	text-decoration: none;
 	border-radius: 3rem;
 	height: 100%;
 	width: 100%;
