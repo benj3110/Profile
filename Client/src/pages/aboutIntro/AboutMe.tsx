@@ -1,6 +1,7 @@
 // import ProfileCard from "./ProfileCard";
 import { useNavigate } from "react-router-dom";
 import styles from "./AboutMe.module.scss"
+import { Controls, Player } from "@lottiefiles/react-lottie-player";
 
 const AboutMe: React.FC = () => {
     const navigate = useNavigate();
@@ -17,6 +18,16 @@ const AboutMe: React.FC = () => {
                     onClick={() => navigate("/about")}>
                     Learn More
                 </div>
+            </div>
+            <div className={styles.Animation}>
+                <Player
+                    autoplay
+                    loop
+                    src="/programmer.json"
+                    className={styles.Animation}
+                >
+                    <Controls visible={false} />
+                </Player>
             </div>
             {/* <ProfileCard>
                 <div className={styles.QualificationsCard}>
