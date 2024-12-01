@@ -9,7 +9,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-
+import { injectSpeedInsights } from '@vercel/speed-insights';
 
 const ScrollToTop = ({ children }: { children: ReactNode }) => {
   const location = useLocation();
@@ -39,7 +39,7 @@ const router = createBrowserRouter([
 
 
 const App: React.FC = () => {
-
+  injectSpeedInsights()
   return (
     <>
       <RouterProvider router={router} />
