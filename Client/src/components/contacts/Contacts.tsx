@@ -24,7 +24,7 @@ const Contacts: React.FC = () => {
                 </ContactsCard>
                 {ContactsList.map((contact) => (
                     <ContactsCard key={contact.title}>
-                        <a href={contact.link} className={styles.ContactCardContents} target="_blank">
+                        <a href={contact.link} className={styles.ContactCardContents} target="_blank" rel="noreferrer">
                             <img src={contact.icon} alt={contact.title} className={styles.ContactsLogos} />
                             <div className={styles.tooltip}>{contact.title}</div>
                         </a>

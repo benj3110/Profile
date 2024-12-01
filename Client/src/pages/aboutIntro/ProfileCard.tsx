@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { ReactNode } from "react";
 import styles from './ProfileCard.module.scss';
 

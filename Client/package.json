@@ -18,18 +18,18 @@
 		"react-scroll": "^1.9.0"
 	},
 	"devDependencies": {
+		"@eslint/js": "^9.15.0",
 		"@types/animejs": "^3.1.12",
 		"@types/react": "^18.2.43",
 		"@types/react-dom": "^18.2.17",
 		"@types/react-scroll": "^1.8.10",
-		"@typescript-eslint/eslint-plugin": "^6.14.0",
-		"@typescript-eslint/parser": "^6.14.0",
 		"@vitejs/plugin-react": "^4.2.1",
-		"eslint": "^8.55.0",
-		"eslint-plugin-react-hooks": "^4.6.0",
-		"eslint-plugin-react-refresh": "^0.4.5",
+		"eslint": "^9.15.0",
+		"eslint-plugin-react": "^7.37.2",
+		"globals": "^15.12.0",
 		"sass": "^1.69.5",
 		"typescript": "^5.2.2",
+		"typescript-eslint": "^8.15.0",
 		"vite": "^5.0.8"
 	}
 }

@@ -1,4 +1,5 @@
-import { ReactNode } from "react";
+/* eslint-disable react/prop-types */
+import type { ReactNode } from "react";
 import styles from './ContactsCard.module.scss';
 
 const ContactsCard: React.FC<{ children: ReactNode }> = ({ children }) => {

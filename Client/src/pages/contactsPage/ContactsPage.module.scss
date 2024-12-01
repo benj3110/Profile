@@ -6,7 +6,7 @@
 	height: 100svh;
 	display: flex;
 	align-items: center;
-	border: 1px red solid;
+	justify-content: space-between;
 }
 .TitleContainer{
 	display: flex;
@@ -39,12 +39,12 @@
 
 .ContactMeTagline{
 	margin-block: 0;
-	margin-left: 3rem;
-	margin-top: 0.4rem;
-	padding: 0.1rem;
+	padding-left: 3rem;
+	padding-top: 0.4rem;
 	font-size: Text.$textXS;
+	width: 450px;
+	text-wrap: wrap;
 	color: Colours.$lightBlue;
-	background-color: #ff0000;
 }
 .Links {
 	display: flex;
@@ -93,5 +93,130 @@
 		&:before {
 			width: 100%;
 		}
+	}
+}
+
+.ImageContainer{
+    position: relative; 
+    width: 470px; 
+    height: 100dvh;
+	margin-right: 6rem;
+	
+}
+.Image1Container{
+    &:hover .Tooltip {
+        opacity: 1;
+    }
+}
+.Tooltip{
+	padding: 6px;
+	position: absolute;
+	width: auto;
+	white-space: nowrap;
+	word-wrap: no-wrap;
+	box-shadow: 1px 1px 20px Colours.$lightBlueGlow;
+	border: 1px solid Colours.$tropicalSea;
+	border-radius: 13px;
+	background-color: Colours.$tropicalSea;
+	font-weight: 700;
+	color: black;
+	--final-top-tool: calc(50dvh + 70px);
+	--final-left-tool: 25px;
+	opacity: 0;
+	transition: opacity 0.2s ease;
+	animation: moveToPositionTooltip 1.3s ease forwards;
+	white-space: nowrap;
+	pointer-events: none;
+	z-index: 3;
+}
+.Tooltip2{
+	--final-top-tool: calc(50dvh - 30px);
+    --final-left-tool: 135px;
+	animation-delay: 0.4s;
+	z-index: 2;
+}
+.Tooltip3{
+	--final-top-tool: calc(50dvh - 130px);
+	--final-left-tool: 245px;
+	animation-delay: 0.4s;
+	z-index: 1;
+}
+.Image{
+	width: 250px;
+	height: 250px;
+	position: absolute; 
+    top: calc(50dvh - 25px);
+    left: 0;
+	clip-path:inset(44px 8px 35px 8px round 16px);
+	animation: moveToPosition 1.3s ease forwards;
+
+	&:hover{
+		filter: brightness(50%);
+		cursor: pointer;
+
+	}
+
+}
+.ImageNoAni{
+	width: 250px;
+	height: 250px;
+	position: absolute; 
+    top: calc(50dvh - 25px);
+    left: 0;
+	clip-path:inset(44px 8px 35px 8px round 16px);
+}
+
+@keyframes moveToPosition {
+    0% {
+        top: calc(50dvh - 25px);
+        left: 0;
+    }
+    100% {
+        top: var(--final-top);
+        left: var(--final-left);
+    }
+}
+@keyframes moveToPositionTooltip {
+    0% {
+		top: calc(50dvh + 70px);
+		left: 25px;
+    }
+    100% {
+        top: var(--final-top-tool);
+        left: var(--final-left-tool);
+    }
+}
+.Image1{
+	z-index: 3;
+    --final-top: calc(50dvh - 25px);
+    --final-left: 0;
+    animation-delay: 0.2s;
+}
+.Image2{
+	z-index: 2;
+    --final-top: calc(50dvh - 125px);
+    --final-left: 110px;
+    animation-delay: 0.4s;
+}
+.Image3{
+	z-index: 1;
+    --final-top: calc(50dvh - 225px);
+    --final-left: 220px;
+    animation-delay: 0.4s;
+}
+
+@media (min-width: 1550px)  {
+	.ImageContainer{
+		margin-right: 10dvw;
+	}
+}
+
+@media (max-width: 1500px) {
+	.SectionContainer {
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+	.ImageContainer{
+		height: 100%;
 	}
 }

@@ -7,7 +7,6 @@
 	height: 100svh;
 	display: flex;
 	align-items: center;
-	border: 1px red solid;
 	justify-content: space-between;
 }
 .Titlewrapper{
@@ -78,7 +77,11 @@ background-image: linear-gradient(
 .Animation{
 	padding-right: 3rem
 }
-  
+@media (min-width: 1600px)  {
+	.Animation{
+		margin-right: 6dvw;
+	}
+}
 @keyframes blink {
 	0%, 19.999%, 22%,39.999%,41%, 62.999%, 64%, 64.999%, 73%, 100% {
 		//text-shadow: none;

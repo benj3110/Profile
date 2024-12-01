@@ -7,7 +7,7 @@
 	min-width: 325px;
 	margin: 0;
 	padding: 0;
-background-color: Colours.$basebg;
+  background-color: Colours.$basebg;
 }
 .PageContent {
 	width: 85%;
@@ -16,15 +16,39 @@ background-color: Colours.$basebg;
 	align-items: flex-start;
   justify-content: flex-start;
 }
-
+.Section1Container {
+	width: 100%;
+	height: 100svh;
+	display: flex;
+	align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+.Section1Content{
+  height: 100%;
+  width: 100%;
+	display: flex;
+	align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+padding-bottom: 5rem;
+}
+.SectionContainer {
+	width: 100%;
+	height: 100svh;
+	display: flex;
+	align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
   
 .Titlewrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 1rem;
+  padding-top: 2rem;
   padding-bottom: 2rem;
-
+align-self: flex-start ;
 }
 .Titlewrapper h1.Title {
   position: relative;
@@ -59,9 +83,58 @@ background-color: Colours.$basebg;
   grid-template-columns: 1fr;
 }
 .Text{
-padding-left: 1rem;
-margin-block: 0;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  margin-block: 0;
+  width: 600px;
+  font-size: Text.$textXXXS; 
+
 }
+.PillList {
+	font-size: 1rem;
+	background-image: linear-gradient(to right bottom, Colours.$solidBlue, #00a0fa);
+	padding: 0.2rem 0.8rem;
+	border-radius: 999px;
+	color: white;
+}
+.SkillsList {
+  // @include CardMainContentStyles;
+  width: 700px;
+  flex-direction: row;
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-block: 0;
+  padding-inline: 0;
+  padding-left: 1rem;
+  padding-bottom: 2rem;
+}
+li {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	color: white;
+}
+.ExpTitle{
+  padding-bottom: 1.5rem;
+  margin-block: 0;
+  width: 600px;
+  font-size: Text.$textXS; 
+  color: Colours.$lightBlue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 // .stack span {
 //   font-weight: bold;
 //   grid-row-start: 1;
