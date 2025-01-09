@@ -24,7 +24,6 @@ const AboutMe: React.FC = () => {
                     autoplay
                     loop
                     src="/programmer.json"
-                    className={styles.Animation}
                 >
                     <Controls visible={false} />
                 </Player>

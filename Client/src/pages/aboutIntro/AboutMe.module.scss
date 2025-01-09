@@ -7,7 +7,7 @@
 	height: 100svh;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: flex-start;
 }
 .Titlewrapper{
 	display: flex;
@@ -75,12 +75,14 @@ background-image: linear-gradient(
 	}
 }
 .Animation{
-	padding-right: 3rem
+	padding-right: 3rem;
+	padding-left: 6rem;
+	width: calc(40% - 9rem);
 }
 @media (min-width: 1600px)  {
-	.Animation{
-		margin-right: 6dvw;
-	}
+	// .Animation{
+	// 	margin-right: 6dvw;
+	// }
 }
 @keyframes blink {
 	0%, 19.999%, 22%,39.999%,41%, 62.999%, 64%, 64.999%, 73%, 100% {

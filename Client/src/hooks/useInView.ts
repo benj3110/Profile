@@ -8,6 +8,8 @@ const useInView = (threshold = 0.1) => {
             ([entry]) => {
                 if (entry.isIntersecting) {
                     setInView(true);
+                }else{
+                    setInView(false)
                 }
             },
             { threshold }
