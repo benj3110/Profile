@@ -77,12 +77,24 @@ background-image: linear-gradient(
 .Animation{
 	padding-right: 3rem;
 	padding-left: 6rem;
-	width: calc(40% - 9rem);
+	width: calc(50% - 9rem);
 }
-@media (min-width: 1600px)  {
-	// .Animation{
-	// 	margin-right: 6dvw;
-	// }
+@media (max-width: 1550px)  {
+	.SectionContainer{
+		flex-direction: column;
+	}
+	.Animation{
+		width: 640px;
+		padding: 0;
+	}
+}
+@media (max-width: 1100px)  {
+	.TitleUnderLine{
+		width: 400px;
+	}
+	.Animation{
+		width: 490px;
+	}
 }
 @keyframes blink {
 	0%, 19.999%, 22%,39.999%,41%, 62.999%, 64%, 64.999%, 73%, 100% {

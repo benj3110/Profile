@@ -3,6 +3,7 @@ import styles from "./ContactsPage.module.scss"
 import useInView from "../../hooks/useInView";
 import { useSpring, animated } from '@react-spring/web'
 const ContactsPage = () => {
+    //todo make contacts reactive
     const [isCopied, setIsCopied] = useState('Copy Email')
     const inView = useInView(0.1); // Trigger when 10% of the element is visible
     const [emailSpring, emailApi] = useSpring(() => ({

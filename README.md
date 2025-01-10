@@ -11,3 +11,4 @@ small screen compatibility
 about me animations
 skills animation
 page transition animation
+breakpoint for mobile 1025px width
