@@ -144,3 +144,11 @@
 		font-size: Text.$textMD;
 	}
 }
+@media (max-height: 900px) {
+	.Titlewrapper h1.Title  {
+		font-size: Text.$textXL;
+	}
+	.Job{
+		font-size: Text.$textMD;
+	}
+}

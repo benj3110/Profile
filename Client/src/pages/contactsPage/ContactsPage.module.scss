@@ -101,11 +101,9 @@
 	justify-content: center;
 	flex-direction: column;
     width: 470px; 
-    height: 100dvh;
-	margin-right: 6rem;
-	
+    height: 100%;
 }
-.Image1Container{
+.ImageContainer{
 	width: fit-content;
     &:hover .Tooltip {
         opacity: 1;
@@ -139,7 +137,8 @@
 .Image{
 	width: 250px;
 	height: 250px;
-
+	position: relative;
+	transform: translate(00);
 	clip-path:inset(44px 8px 35px 8px round 16px);
 	// animation: moveToPosition 1.3s ease forwards;
 
@@ -152,12 +151,55 @@
 }
 
 
-@media (max-width: 1500px) {
+@media (max-width: 1600px) {
 	.SectionContainer {
 		flex-direction: column;
-		justify-content: flex-start;
+	}
+	.TitleContainer{
+		align-items: center;
+	}
+	.Title{
+		padding-left: 0;
+		font-size: Text.$textXL;
 	}
 	.TitleUnderLine{
-		width: 450px;
+		width: 400px;
+		margin-left: 0;
+		background-image: linear-gradient(
+			to left,
+			transparent 0,
+			Colours.$lightBlueGlow ,
+			white 100%,
+			transparent
+		);
+	}
+	.ImagesContainer{
+		align-items: center;
+		justify-content: flex-start;
+		position: relative;
+	}
+	.ContactMeTagline{
+		padding-left: 0;
+		text-align: center;
+	}
+	.Image{
+		position: absolute;
+		left: 50%;
+    	transform: translate(-50%, 0);
+		width: 200px;
+		height: 200px;
+		clip-path:none;
+	}
+	.Tooltip{
+		top: 60px;
+		transform: translate(-50%, 0);
+	}
+}
+
+@media (max-height: 800px) {
+	.Image{
+		width: 150px;
+		height: 150px;
+
 	}
 }
