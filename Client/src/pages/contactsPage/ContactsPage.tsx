@@ -3,21 +3,26 @@ import styles from "./ContactsPage.module.scss"
 import useInView from "../../hooks/useInView";
 import { useSpring, animated } from '@react-spring/web'
 const ContactsPage = () => {
+    //todo make contacts reactive
     const [isCopied, setIsCopied] = useState('Copy Email')
     const inView = useInView(0.1); // Trigger when 10% of the element is visible
     const [emailSpring, emailApi] = useSpring(() => ({
-        from: { x: 0 },
+        from: { x: 0, y: 0 },
     }))
     const [linkedSpring, linkedApi] = useSpring(() => ({
-        from: { x: 0 },
+        from: { x: 0, y: 0 },
     }))
     const [githubSpring, githubApi] = useSpring(() => ({
-        from: { x: 0 },
+        from: { x: 0, y: 0 },
     }))
     const windowWidth = window.innerWidth
+    const windowHeight = window.innerHeight
     useEffect(() => {
         const windowWidthPercent = windowWidth / 100
-        if (inView) {
+
+        const smallScreen = windowWidth <= 1600
+        const shortScreen = windowHeight <= 800
+        if (inView && !smallScreen) {
             emailApi.start({
                 from: {
                     x: 0,
@@ -57,23 +62,68 @@ const ContactsPage = () => {
                     tension: 200,
                 },
             })
-        } else {
+            return
+        } else if (inView && smallScreen) {
             emailApi.start({
+                from: {
+                    y: 0,
+                },
                 to: {
-                    x: 0,
+                    y: shortScreen ? 10 : 30,
+                },
+                delay: 500,
+                config: {
+                    friction: 70,
+                    tension: 200,
                 },
             })
             linkedApi.start({
+                from: {
+                    y: 0,
+                },
                 to: {
-                    x: 0,
+                    y: shortScreen ? 120 : 180,
+                },
+                delay: 500,
+                config: {
+                    friction: 70,
+                    tension: 200,
                 },
             })
             githubApi.start({
+                from: {
+                    y: 0,
+                },
                 to: {
-                    x: 0,
+                    y: shortScreen ? 230 : 330,
+                },
+                delay: 500,
+                config: {
+                    friction: 70,
+                    tension: 200,
                 },
             })
+            return
         }
+
+        emailApi.start({
+            to: {
+                x: 0,
+                y: 0,
+            },
+        })
+        linkedApi.start({
+            to: {
+                x: 0,
+                y: 0,
+            },
+        })
+        githubApi.start({
+            to: {
+                x: 0,
+                y: 0,
+            },
+        })
     }, [inView])
     return (
         <section className={styles.SectionContainer} id="contacts">
@@ -84,7 +134,7 @@ const ContactsPage = () => {
                 <p className={styles.ContactMeTagline}>benitovark@gmail.com</p>
             </div>
             <div className={styles.ImagesContainer}>
-                <animated.div className={styles.Image1Container} style={{ ...emailSpring }}>
+                <animated.div className={styles.ImageContainer} style={{ ...emailSpring }}>
                     <img
                         className={styles.Image}
                         src="/uniformEmailiconbgless.png"
@@ -97,7 +147,7 @@ const ContactsPage = () => {
                         }}></img>
                     <div className={styles.Tooltip}>{isCopied}</div>
                 </animated.div>
-                <animated.div className={styles.Image1Container} style={{ ...linkedSpring }}>
+                <animated.div className={styles.ImageContainer} style={{ ...linkedSpring }}>
                     <img
                         className={styles.Image}
                         src="/uniformLinkediconbgless.png"
@@ -105,7 +155,7 @@ const ContactsPage = () => {
                     ></img>
                     <div className={styles.Tooltip}>LinkedIn</div>
                 </animated.div>
-                <animated.div className={styles.Image1Container} style={{ ...githubSpring }}>
+                <animated.div className={styles.ImageContainer} style={{ ...githubSpring }}>
                     <img
                         className={styles.Image}
                         src="/uniformGithubiconbgless.png"

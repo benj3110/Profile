@@ -79,7 +79,7 @@ button:focus-visible {
 	}
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
 	body{
 		display: none;
 	}

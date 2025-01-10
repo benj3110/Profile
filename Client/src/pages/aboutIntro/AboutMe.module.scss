@@ -8,6 +8,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
+	overflow: hidden;
 }
 .Titlewrapper{
 	display: flex;
@@ -77,13 +78,43 @@ background-image: linear-gradient(
 .Animation{
 	padding-right: 3rem;
 	padding-left: 6rem;
-	width: calc(40% - 9rem);
+	width: calc(50% - 9rem);
 }
-@media (min-width: 1600px)  {
-	// .Animation{
-	// 	margin-right: 6dvw;
-	// }
+@media (max-width: 1550px)  {
+	.SectionContainer{
+		flex-direction: column;
+	}
+	.Animation{
+		width: 490px;
+		padding: 0;
+	}
+	.Titlewrapper{
+		align-items: center;
+	}
+	.Title{
+		padding-left: 0;
+		font-size: Text.$textXL;
+	}
+	.TitleUnderLine{
+		width: 400px;
+		margin-left: 0;
+		background-image: linear-gradient(
+			to left,
+			transparent 0,
+			Colours.$lightBlueGlow ,
+			white 100%,
+			transparent
+		);
+	}
+	.AboutMeTagline{
+		padding-left: 0;
+		text-align: center;
+	}
+	.LearnButton{
+		margin-left: 0;
+	}
 }
+
 @keyframes blink {
 	0%, 19.999%, 22%,39.999%,41%, 62.999%, 64%, 64.999%, 73%, 100% {
 		//text-shadow: none;
