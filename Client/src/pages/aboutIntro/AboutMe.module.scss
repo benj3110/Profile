@@ -15,6 +15,10 @@
 	flex-direction: column;
 	align-items: flex-start;
 }
+.TitleContainer{
+	display: flex;
+	flex-direction: column;
+}
 .Title{
 	font-weight: 800;
 	font-size: Text.$text2XL;
@@ -80,7 +84,7 @@ background-image: linear-gradient(
 	padding-left: 6rem;
 	width: calc(50% - 9rem);
 }
-@media (max-width: 1550px)  {
+@media (max-width: 1600px)  {
 	.SectionContainer{
 		flex-direction: column;
 	}
@@ -91,12 +95,17 @@ background-image: linear-gradient(
 	.Titlewrapper{
 		align-items: center;
 	}
+	.TitleContainer{
+	flex-direction: row;
+	padding-top: 2rem;
+	}
 	.Title{
 		padding-left: 0;
+		padding-right: 2rem;
 		font-size: Text.$textXL;
 	}
 	.TitleUnderLine{
-		width: 400px;
+		width: 500px;
 		margin-left: 0;
 		background-image: linear-gradient(
 			to left,

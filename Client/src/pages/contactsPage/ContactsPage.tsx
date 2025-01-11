@@ -128,7 +128,7 @@ const ContactsPage = () => {
     return (
         <section className={styles.SectionContainer} id="contacts">
             <div className={styles.TitleContainer}>
-                <h1 className={styles.Title}>Get in</h1>
+                <h1 className={`${styles.Title} ${styles.TitleTop}`}>Get in</h1>
                 <h1 className={styles.Title}>Touch</h1>
                 <div className={styles.TitleUnderLine} />
                 <p className={styles.ContactMeTagline}>benitovark@gmail.com</p>

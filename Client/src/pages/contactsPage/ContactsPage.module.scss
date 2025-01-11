@@ -162,9 +162,12 @@
 		padding-left: 0;
 		font-size: Text.$textXL;
 	}
+	.TitleTop{
+		padding-top: 2rem;
+	}
 	.TitleUnderLine{
-		width: 400px;
-		margin-left: 0;
+		width: 320px;
+		margin-left: 2rem;
 		background-image: linear-gradient(
 			to left,
 			transparent 0,
@@ -191,7 +194,7 @@
 		clip-path:none;
 	}
 	.Tooltip{
-		top: 60px;
+		top: 85px;
 		transform: translate(-50%, 0);
 	}
 }
@@ -200,6 +203,9 @@
 	.Image{
 		width: 150px;
 		height: 150px;
-
+		clip-path:none;
+	}
+	.Tooltip{
+		top: 60px;
 	}
 }
