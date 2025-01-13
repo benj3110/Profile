@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import styles from "./ContactsPage.module.scss"
 import useInView from "../../hooks/useInView";
 import { useSpring, animated } from '@react-spring/web'
+import useScreenWidthSize from "../../hooks/useScreenSize";
 const ContactsPage = () => {
     //todo make contacts reactive
     const [isCopied, setIsCopied] = useState('Copy Email')
@@ -17,12 +18,11 @@ const ContactsPage = () => {
     }))
     const windowWidth = window.innerWidth
     const windowHeight = window.innerHeight
+    const screenWidthSize = useScreenWidthSize()
     useEffect(() => {
         const windowWidthPercent = windowWidth / 100
-
-        const smallScreen = windowWidth <= 1600
         const shortScreen = windowHeight <= 800
-        if (inView && !smallScreen) {
+        if (inView && screenWidthSize == "large") {
             emailApi.start({
                 from: {
                     x: 0,
@@ -63,7 +63,7 @@ const ContactsPage = () => {
                 },
             })
             return
-        } else if (inView && smallScreen) {
+        } else if (inView && !(screenWidthSize == "large")) {
             emailApi.start({
                 from: {
                     y: 0,

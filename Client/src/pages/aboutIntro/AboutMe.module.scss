@@ -123,6 +123,15 @@ background-image: linear-gradient(
 		margin-left: 0;
 	}
 }
+@media(max-width: 900px){
+	.Title{
+		font-size: 4rem;
+	}
+	.AboutMeTagline{
+		width: 100%;
+		height: fit-content;
+	}
+}
 
 @keyframes blink {
 	0%, 19.999%, 22%,39.999%,41%, 62.999%, 64%, 64.999%, 73%, 100% {

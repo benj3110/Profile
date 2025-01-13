@@ -80,7 +80,7 @@ button:focus-visible {
 }
 
 @media (max-width: 900px) {
-	body{
+	/* body{
 		display: none;
-	}
+	} */
 }

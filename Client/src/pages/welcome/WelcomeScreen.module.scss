@@ -144,11 +144,27 @@
 		font-size: Text.$textMD;
 	}
 }
+
 @media (max-height: 900px) {
 	.Titlewrapper h1.Title  {
 		font-size: Text.$textXL;
 	}
 	.Job{
 		font-size: Text.$textMD;
+	}
+}
+@media (max-width: 900px) {
+	.WelcomeScreenBox {
+		width: calc(100% - 2rem);
+	}
+	.Titlewrapper h1.Title  {
+		font-size: Text.$textMD;
+	}
+	.Job{
+		font-size: Text.$textSM;
+	}
+	.Animation {
+		width: 400px;
+		height: 300px;	
 	}
 }

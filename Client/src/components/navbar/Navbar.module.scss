@@ -14,7 +14,19 @@
 	z-index: 1;
 	top: 0;
 }
-
+.NavbarMobile{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	min-width: fit-content;
+	padding-left: 1rem;
+	height: 100svh;
+	background-color: Colours.$basebg;
+	position: sticky;
+	z-index: 1;
+	top: 0;
+}
 .LinksContainer {
 	width: 100%;
 	list-style: none;
@@ -131,34 +143,3 @@
 		}
 	}
 }
-// .LinkBar {
-// 	width: 40px;
-// 	height: 3px;
-// 	// background-color: Colours.$tropicalSea;
-// 	top: 50%;
-// 	margin-top: auto;
-// 	margin-bottom: auto;
-// }
-// .LinkBarCV {
-// 	width: 40px;
-// 	height: 3px;
-// 	// background-color: Colours.$solidBlue;
-// 	top: 50%;
-// 	margin-top: auto;
-// 	margin-bottom: auto;
-// 	transition: 0.1s cubic-bezier(0.5, 0.25, 0, 1);
-// }
-// .LinkContainer:has(.Cv:hover) .LinkBarCV {
-// 	background-color: #f26e3f;
-// }
-// .LinkContainer:has(.Cv:not(:hover)) .LinkBarCV {
-// 	transition: 0.1s cubic-bezier(0.5, 0.25, 0, 1);
-// 	transition-delay: 0.4s;
-// }
-// .LinkContainer:has(.Links:hover) .LinkBar {
-// 	background-color: Colours.$tropicalSea;
-// }
-// .LinkContainer:has(.Links:not(:hover)) .LinkBar {
-// 	transition: 0.1s cubic-bezier(0.5, 0.25, 0, 1);
-// 	transition-delay: 0.4s;
-// }
