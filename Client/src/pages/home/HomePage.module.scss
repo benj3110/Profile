@@ -21,7 +21,11 @@
 }
 
 @media (max-width: 900px) {
+
 	.PageContent {
-		width: calc(100% - 64px);
+		width:100%;
+	}
+	.PageContainer{
+		flex-direction: column;
 	}
 }

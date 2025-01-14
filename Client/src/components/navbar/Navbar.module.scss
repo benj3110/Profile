@@ -11,20 +11,21 @@
 	height: 100svh;
 	background-color: Colours.$basebg;
 	position: sticky;
-	z-index: 1;
+	z-index: 10;
 	top: 0;
 }
 .NavbarMobile{
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	justify-content: center;
-	align-items: flex-start;
-	min-width: fit-content;
-	padding-left: 1rem;
-	height: 100svh;
+	align-items: center;
+	min-width: 100dvw;
+	padding-top: 1rem;
+	padding-bottom: 0.5rem;
+	height: fit-content;
 	background-color: Colours.$basebg;
 	position: sticky;
-	z-index: 1;
+	z-index: 10;
 	top: 0;
 }
 .LinksContainer {
@@ -40,10 +41,15 @@
 	transition: width 0.4s ease;
 	gap: 0.5rem;
 }
+.LinkContainerMobile{
+	width: 80px;
+}
 .LinkContainer {
 	height: 35px;
 }
-
+.LinksMobile{
+	height: 40px;
+}
 .Links {
 	display: flex;
 	justify-content: center;

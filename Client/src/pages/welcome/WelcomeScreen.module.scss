@@ -153,18 +153,67 @@
 		font-size: Text.$textMD;
 	}
 }
-@media (max-width: 900px) {
-	.WelcomeScreenBox {
-		width: calc(100% - 2rem);
-	}
+@media screen and (max-height: 900px) and (max-width: 1225px){
 	.Titlewrapper h1.Title  {
-		font-size: Text.$textMD;
+		font-size: 3.5rem;
+	}
+	.Titlewrapper h1.Title::after{
+		content: "Benito Varghese";
+		display: block;
+		position: absolute;
+		top: 0;
+		text-shadow: 0 0 0.3rem rgba(255, 166, 0, 0);
+		  -webkit-text-stroke-width: 1px;
+		  -webkit-text-stroke-color: Colours.$lightBlue;
+		  animation-name: Name-animation;
+		  animation-duration: 3.5s;
+		  animation-timing-function: linear;
+		  animation-delay: 0s;
+		  animation-iteration-count: 1;
+		  animation-fill-mode: forwards;
+		  animation-direction: alternate-reverse;
 	}
 	.Job{
 		font-size: Text.$textSM;
 	}
+}
+@media (max-width: 900px) {
+	.WelcomeScreenContainer{
+		height: calc(100dvh - 64px);
+		// margin-top: 64px;
+	}
+	.WelcomeScreenBox {
+		width: calc(100dvw - 3rem);
+		height: calc(100dvh - 6rem);
+		// margin-top: 1rem;
+	}
+	.Titlewrapper h1.Title  {
+		font-size: 3.5rem;
+	}
+	.Titlewrapper h1.Title::after{
+		content: "Benito Varghese";
+		display: block;
+		position: absolute;
+		top: 0;
+		text-shadow: 0 0 0.3rem rgba(255, 166, 0, 0);
+		  -webkit-text-stroke-width: 1px;
+		  -webkit-text-stroke-color: Colours.$lightBlue;
+		  animation-name: Name-animation;
+		  animation-duration: 3.5s;
+		  animation-timing-function: linear;
+		  animation-delay: 0s;
+		  animation-iteration-count: 1;
+		  animation-fill-mode: forwards;
+		  animation-direction: alternate-reverse;
+	}
+	  
+	.Job{
+		font-size: Text.$textSM;
+	}
 	.Animation {
-		width: 400px;
-		height: 300px;	
+		width: calc(100dvw - 5rem);
+		min-width: 200px;
+		min-height: 200px;
+		height: 50dvh;	
 	}
 }

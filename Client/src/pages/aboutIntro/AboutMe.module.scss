@@ -96,13 +96,17 @@ background-image: linear-gradient(
 		align-items: center;
 	}
 	.TitleContainer{
-	flex-direction: row;
-	padding-top: 2rem;
+		flex-direction: row;
+		padding-top: 2rem;
 	}
 	.Title{
 		padding-left: 0;
 		padding-right: 2rem;
 		font-size: Text.$textXL;
+	}
+	.B{
+		padding-right: 0rem;
+
 	}
 	.TitleUnderLine{
 		width: 500px;
@@ -124,12 +128,34 @@ background-image: linear-gradient(
 	}
 }
 @media(max-width: 900px){
+	.SectionContainer {
+		height: calc(100dvh - 64px);
+	}
+	.TitleContainer{
+		flex-direction: row;
+		padding-top: 1rem;
+	}
 	.Title{
 		font-size: 4rem;
+		padding-right: 1rem;
+	}
+	.B{
+		padding-right: 0rem;
+
 	}
 	.AboutMeTagline{
-		width: 100%;
+		width: 95dvw;
+		max-width: 450px;
 		height: fit-content;
+	}
+	.TitleUnderLine{
+		width: 80dvw;
+		max-width: 400px;
+	}
+	.Animation{
+		width: 95dvw;
+		padding: 0;
+		max-width: 500px;
 	}
 }
 
