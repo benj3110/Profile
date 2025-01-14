@@ -8,5 +8,5 @@ Tools - [https://mycolor.space/gradient?ori=to+left+bottom&hex=%23A340F4&hex2=%2
 //todo 
 skills animation
 page transition animation
-<!-- mobile scroll bug as dvh changes to svh as url bar disappears -->
+mobile scroll bug as dvh changes to svh as url bar disappears
 finish about me full page 

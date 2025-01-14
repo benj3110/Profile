@@ -179,12 +179,12 @@
 }
 @media (max-width: 900px) {
 	.WelcomeScreenContainer{
-    	height: calc(var(--viewport-height, 100dvh) - 64px);
+    	height: calc(100lvh - 64px);
 		// margin-top: 64px;
 	}
 	.WelcomeScreenBox {
 		width: calc(100dvw - 3rem);
-		height: calc(var(--viewport-height, 100dvh) - 7rem);
+		height: calc(100lvh - 7rem);
 		// margin-top: 1rem;
 	}
 	.Titlewrapper h1.Title  {
