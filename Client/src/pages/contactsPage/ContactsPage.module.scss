@@ -212,10 +212,10 @@
 
 @media(max-width: 900px){
 	.SectionContainer {
-		height: calc(100dvh - 64px);
+		height: calc(100svh - 64px);
 	}
 	.TitleUnderLine{
-		width: 80dvw;
+		width: 80svw;
 		max-width: 300px;
 	}
 	.Title{
@@ -229,6 +229,6 @@
 		font-size: 1.3rem;
 	}
 	.ImagesContainer{
-		width: 95dvw;
+		width: 95svw;
 	}
 }
