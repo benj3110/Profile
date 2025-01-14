@@ -216,10 +216,10 @@
 		width: calc(100dvw - 5rem);
 		min-width: 200px;
 		min-height: 200px;
-		height: calc((42 / 100) * 100lvh);	
+		height: calc((30 / 100) * 100lvh);	
 	}
 }
-@media screen and (max-height: 660px) and (max-width: 575px){
+@media screen and (max-height: 580px) and (max-width: 575px){
 	.Titlewrapper h1.Title  {
 		font-size: 2.5rem;
 	}
@@ -227,7 +227,7 @@
 		font-size: Text.$textXXS;
 	}
 }
-@media screen and (max-height: 725px) and (max-width: 475px){
+@media screen and (max-height: 625px) and (max-width: 475px){
 	.Titlewrapper h1.Title  {
 		font-size: 2.5rem;
 	}
