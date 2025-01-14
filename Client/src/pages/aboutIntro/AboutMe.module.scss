@@ -129,7 +129,7 @@ background-image: linear-gradient(
 }
 @media(max-width: 900px){
 	.SectionContainer {
-		height: calc(100svh - 64px);
+		height: calc(var(--viewport-height, 100dvh) - 64px);
 	}
 	.TitleContainer{
 		flex-direction: row;
@@ -144,16 +144,16 @@ background-image: linear-gradient(
 
 	}
 	.AboutMeTagline{
-		width: 95svw;
+		width: 95dvw;
 		max-width: 450px;
 		height: fit-content;
 	}
 	.TitleUnderLine{
-		width: 80svw;
+		width: 80dvw;
 		max-width: 400px;
 	}
 	.Animation{
-		width: 95svw;
+		width: 95dvw;
 		padding: 0;
 		max-width: 500px;
 	}
