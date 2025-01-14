@@ -212,7 +212,7 @@
 
 @media(max-width: 900px){
 	.SectionContainer {
-		height: calc(var(--viewport-height, 100dvh) - 64px);
+    	height: calc(100lvh - 64px);
 	}
 	.TitleUnderLine{
 		width: 80dvw;

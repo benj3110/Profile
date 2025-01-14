@@ -177,14 +177,16 @@
 		font-size: Text.$textSM;
 	}
 }
+
 @media (max-width: 900px) {
 	.WelcomeScreenContainer{
-    	height: calc(var(--viewport-height, 100dvh) - 64px);
+    	height: calc(100lvh - 64px);
 		// margin-top: 64px;
 	}
 	.WelcomeScreenBox {
 		width: calc(100dvw - 3rem);
-		height: calc(var(--viewport-height, 100dvh) - 7rem);
+		height: calc(100lvh - 12rem);
+		margin-top: -3rem;
 		// margin-top: 1rem;
 	}
 	.Titlewrapper h1.Title  {
@@ -214,6 +216,14 @@
 		width: calc(100dvw - 5rem);
 		min-width: 200px;
 		min-height: 200px;
-		height: calc((45 / 100) * var(--viewport-height, 100dvh));	
+		height: calc((42 / 100) * 100lvh);	
+	}
+}
+@media screen and (max-height: 720px) and (max-width: 575px){
+	.Titlewrapper h1.Title  {
+		font-size: 2.5rem;
+	}
+	.Job{
+		font-size: Text.$textXXS;
 	}
 }
