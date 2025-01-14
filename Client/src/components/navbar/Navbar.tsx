@@ -3,18 +3,17 @@ import styles from "./Navbar.module.scss"
 import { Events, Link, scroller } from "react-scroll";
 import Contacts from "../contacts/Contacts";
 import { useEffect, useRef } from "react";
+import useScreenWidthSize from "../../hooks/useScreenSize";
 
 const Navbar: React.FC = () => {
     const openCV = () => {
         const pdfUrl = "/BenitoVargheseCV.pdf";
         window.open(pdfUrl, "_blank");
     }
-
     const isScrollingRef = useRef(false);
     Events.scrollEvent.register('begin', () => {
         isScrollingRef.current = true
     });
-
     Events.scrollEvent.register('end', () => {
         setTimeout(() => {
             isScrollingRef.current = false;
@@ -33,7 +32,7 @@ const Navbar: React.FC = () => {
                 if (section) {
                     const rect = section.getBoundingClientRect();
                     // Check if section is near the top of the viewport
-                    if (rect.top >= -200 && rect.top <= window.innerHeight / 2) {
+                    if (rect.top >= -100 && rect.top <= window.innerHeight / 2) {
                         currentIndex = index;
                     }
                 }
@@ -57,6 +56,7 @@ const Navbar: React.FC = () => {
             }
             scroller.scrollTo(sections[currentSectionIndex], {
                 smooth: "easeInOutCubic",
+                offset: -64
             });
         };
 
@@ -96,10 +96,10 @@ const Navbar: React.FC = () => {
 
             const swipeDistance = touchStartY - touchEndY;
 
-            if (swipeDistance > 30) {
+            if (swipeDistance > 20) {
                 // Swipe up (scroll down)
                 navigateSections("down");
-            } else if (swipeDistance < -30) {
+            } else if (swipeDistance < -20) {
                 // Swipe down (scroll up)
                 navigateSections("up");
             }
@@ -118,55 +118,76 @@ const Navbar: React.FC = () => {
             window.removeEventListener("touchend", handleTouchEnd);
         };
     }, []);
+    const screenWidthSize = useScreenWidthSize()
 
     return (
-        <nav className={styles.Navbar}>
-            <ul className={styles.LinksContainer}>
-                <div className={styles.LinkContainer} >
-                    <Link
-                        activeClass={styles.active}
-                        spy={true}
-                        smooth={'easeInOutCubic'}
-                        to="welcomeScreen"
-                        className={styles.Links}>
-                        Home
-                    </Link>
-                </div>
-                <div className={styles.LinkContainer} >
-                    <Link
-                        activeClass={styles.active}
-                        spy={true}
-                        smooth={'easeInOutCubic'}
-                        to="profile"
-                        className={styles.Links}>
-                        About
-                    </Link>
-                </div>
-                <div className={styles.LinkContainer} >
-                    <Link
-                        activeClass={styles.active}
-                        spy={true}
-                        smooth={'easeInOutCubic'}
-                        to="contacts"
-                        className={styles.Links}>
-                        Contacts
-                    </Link>
-                </div>
-                <div className={styles.LinkContainer} >
-                    <div className={styles.Links}>
+        <>
+            {!(screenWidthSize == "small") ? <nav className={styles.Navbar}>
+                <ul className={styles.LinksContainer}>
+                    <div className={styles.LinkContainer} >
                         <Link
                             activeClass={styles.active}
                             spy={true}
                             smooth={'easeInOutCubic'}
-                            to="welcomeScreen" className={styles.Cv}
-                            onClick={openCV}>
-                            CV
+                            to="welcomeScreen"
+                            className={styles.Links}>
+                            Home
                         </Link>
                     </div>
-                </div>
-            </ul>
-            <Contacts />
-        </nav>);
+                    <div className={styles.LinkContainer} >
+                        <Link
+                            activeClass={styles.active}
+                            spy={true}
+                            smooth={'easeInOutCubic'}
+                            to="profile"
+                            className={styles.Links}>
+                            About
+                        </Link>
+                    </div>
+                    <div className={styles.LinkContainer} >
+                        <Link
+                            activeClass={styles.active}
+                            spy={true}
+                            smooth={'easeInOutCubic'}
+                            to="contacts"
+                            className={styles.Links}>
+                            Contacts
+                        </Link>
+                    </div>
+                    <div className={styles.LinkContainer} >
+                        <div className={styles.Links}>
+                            <Link
+                                activeClass={styles.active}
+                                spy={true}
+                                smooth={'easeInOutCubic'}
+                                to="welcomeScreen" className={styles.Cv}
+                                onClick={openCV}>
+                                CV
+                            </Link>
+                        </div>
+                    </div>
+                </ul>
+                <Contacts />
+            </nav> :
+                <nav className={styles.NavbarMobile}>
+                    <Contacts />
+                    <div className={styles.LinkContainerMobile} >
+                        <div className={styles.LinksMobile}>
+                            <Link
+                                activeClass={styles.active}
+                                spy={true}
+                                smooth={'easeInOutCubic'}
+                                to="welcomeScreen" className={styles.Cv}
+                                onClick={openCV}>
+                                CV
+                            </Link>
+                        </div>
+                    </div>
+
+
+                </nav>}
+        </>
+    );
 }
 
 export default Navbar

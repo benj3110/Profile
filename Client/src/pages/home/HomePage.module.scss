@@ -19,3 +19,13 @@
 	flex-direction: column;
 	align-items: flex-end;
 }
+
+@media (max-width: 900px) {
+
+	.PageContent {
+		width:100%;
+	}
+	.PageContainer{
+		flex-direction: column;
+	}
+}

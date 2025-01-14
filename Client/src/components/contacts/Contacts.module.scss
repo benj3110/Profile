@@ -91,8 +91,24 @@
 	}
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 900px) {
 	.SectionContainer {
-		margin-top: 20svh;
+		width: fit-content;
+		padding-right: 7dvw;
+	}
+	.ContactsListContainer { 
+		flex-direction: row;
+	}
+	.tooltip {
+		top: 60px;
+		&:after {
+			bottom: 0px; // Reset bottom positioning
+			top: 0px; // Triangle pointing up
+		}
+
+		&:before {
+			bottom: auto; // Reset bottom positioning
+			top: 0px; // Triangle shadow pointing up
+		}
 	}
 }

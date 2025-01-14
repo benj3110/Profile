@@ -209,3 +209,26 @@
 		top: 60px;
 	}
 }
+
+@media(max-width: 900px){
+	.SectionContainer {
+		height: calc(100dvh - 64px);
+	}
+	.TitleUnderLine{
+		width: 80dvw;
+		max-width: 300px;
+	}
+	.Title{
+		font-size: 4rem;
+	}
+	.TitleTop{
+		padding-top: 1rem;
+	}
+	.ContactMeTagline{
+		width: 100%;
+		font-size: 1.3rem;
+	}
+	.ImagesContainer{
+		width: 95dvw;
+	}
+}

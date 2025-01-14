@@ -7,8 +7,5 @@ Tools - [https://mycolor.space/gradient?ori=to+left+bottom&hex=%23A340F4&hex2=%2
 
 //todo 
 mobile navbar 
-small screen compatibility
-about me animations
 skills animation
 page transition animation
-breakpoint for mobile 1025px width
