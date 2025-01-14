@@ -177,6 +177,7 @@
 		font-size: Text.$textSM;
 	}
 }
+
 @media (max-width: 900px) {
 	.WelcomeScreenContainer{
     	height: calc(100lvh - 64px);
@@ -216,5 +217,13 @@
 		min-width: 200px;
 		min-height: 200px;
 		height: calc((45 / 100) * 100lvh);	
+	}
+}
+@media screen and (max-height: 780px) and (max-width: 575px){
+	.Titlewrapper h1.Title  {
+		font-size: 2.5rem;
+	}
+	.Job{
+		font-size: Text.$textXXS;
 	}
 }
