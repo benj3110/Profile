@@ -6,7 +6,7 @@ const AboutFullPage = () => {
         <div className={styles.PageContainer}>
             <ShortNavbar />
             <div className={styles.PageContent}>
-                <section className={styles.Section1Container} id="whoami">
+                <section className={styles.SectionContainer} id="whoami">
                     <div className={`${styles.Titlewrapper}`} data-text="about me">
                         <h1 className={`${styles.Title}`}>
                             About Me

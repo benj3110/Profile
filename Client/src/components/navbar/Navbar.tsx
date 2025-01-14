@@ -10,6 +10,7 @@ const Navbar: React.FC = () => {
         const pdfUrl = "/BenitoVargheseCV.pdf";
         window.open(pdfUrl, "_blank");
     }
+    const screenWidthSize = useScreenWidthSize()
     const isScrollingRef = useRef(false);
     Events.scrollEvent.register('begin', () => {
         isScrollingRef.current = true
@@ -56,7 +57,7 @@ const Navbar: React.FC = () => {
             }
             scroller.scrollTo(sections[currentSectionIndex], {
                 smooth: "easeInOutCubic",
-                offset: -64
+                offset: (screenWidthSize == "small") && -64
             });
         };
 
@@ -118,7 +119,7 @@ const Navbar: React.FC = () => {
             window.removeEventListener("touchend", handleTouchEnd);
         };
     }, []);
-    const screenWidthSize = useScreenWidthSize()
+
 
     return (
         <>
