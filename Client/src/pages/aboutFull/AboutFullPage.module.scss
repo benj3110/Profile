@@ -4,25 +4,17 @@
 .PageContainer {
 	display: flex;
 	width: 100dvw;
-	min-width: 325px;
 	margin: 0;
 	padding: 0;
   background-color: Colours.$basebg;
 }
+
 .PageContent {
 	width: 85%;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
   justify-content: flex-start;
-}
-.Section1Container {
-	width: 100%;
-	height: 100svh;
-	display: flex;
-	align-items: flex-start;
-  justify-content: center;
-  flex-direction: column;
 }
 .Section1Content{
   height: 100%;
@@ -73,6 +65,8 @@ align-self: flex-start ;
     white 100%,
     transparent
   );
+  flex-shrink: 0;
+
 }
 .AboutMeParagraphTitle{
   margin-block: 0;
@@ -99,7 +93,7 @@ align-self: flex-start ;
 }
 .SkillsList {
   // @include CardMainContentStyles;
-  width: 700px;
+  width: 600px;
   flex-direction: row;
   align-items: flex-start;
   display: flex;
@@ -126,6 +120,88 @@ li {
 
 
 
+@media(max-width: 900px){
+  .PageContainer {
+    flex-direction: column;
+    align-items: center;
+
+	}
+  .PageContent {
+    width: 100dvw;
+  }
+  .SectionContainer {
+    align-items: center;
+    justify-content: flex-start;
+    height: calc(100lvh - 64px);
+//  overflow-y: scroll;
+    width: 100dvw;
+  }
+  .Titlewrapper {
+    align-self: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .Titlewrapper h1.Title {
+    font-size: 4.4rem;
+  }
+  .Section1Content{
+    align-items: center;
+    text-align: center;
+    justify-content: flex-start;
+    padding-bottom: 0;
+  }
+  .AboutMeParagraphTitle{
+    font-size: 2rem;
+    margin-top: min(3dvh, 1.5rem);
+  }
+  .TitleUnderLine{
+    width: max(300px, 50dvw);
+  }
+  .Text{
+    padding-left: 0;
+    width: 80dvw;
+    text-align: center;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+  }
+  .ExpTitle{
+    text-align: center;
+    width: 80dvw;
+  }
+  .SkillsList {
+    padding-left: 0;
+    padding-bottom: 1rem;
+    width: 95dvw;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .PillList {
+    font-size: 0.85rem;
+    padding: 0.2rem 0.6rem;
+  }
+}
+
+@media screen and (max-width: 450px) and (max-height: 775px){
+  .Titlewrapper{
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+  }
+  .Titlewrapper h1.Title {
+    font-size: 3.4rem;
+  }
+  .ExpTitle{
+    width: 92dvw;
+    font-size: 1.3rem;
+    padding-bottom: 0.5rem;
+  }
+  .AboutMeParagraphTitle{
+    font-size: 1.6rem;
+    margin-top: min(3dvh, 1rem);
+  }
+  .Text{
+    width: 92dvw;
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+  }
+}
 
 
 

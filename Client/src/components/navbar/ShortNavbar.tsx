@@ -2,16 +2,17 @@
 import styles from "./Navbar.module.scss"
 import { Link } from "react-router-dom";
 import Contacts from "../contacts/Contacts";
-import { Events, scroller } from "react-scroll";
+import { Events, scroller, Link as CVLink } from "react-scroll";
 import { useEffect, useRef } from "react";
+import useScreenWidthSize from "../../hooks/useScreenSize";
 
 const ShortNavbar: React.FC = () => {
     const openCV = () => {
         const pdfUrl = "/BenitoVargheseCV.pdf";
         window.open(pdfUrl, "_blank");
     }
+    const screenWidthSize = useScreenWidthSize()
     const isScrollingRef = useRef(false);
-
     Events.scrollEvent.register('begin', () => {
         isScrollingRef.current = true
     });
@@ -34,7 +35,7 @@ const ShortNavbar: React.FC = () => {
                 if (section) {
                     const rect = section.getBoundingClientRect();
                     // Check if section is near the top of the viewport
-                    if (rect.top >= -200 && rect.top <= window.innerHeight / 2) {
+                    if (rect.top >= -100 && rect.top <= window.innerHeight / 2) {
                         currentIndex = index;
                     }
                 }
@@ -58,6 +59,7 @@ const ShortNavbar: React.FC = () => {
             }
             scroller.scrollTo(sections[currentSectionIndex], {
                 smooth: "easeInOutCubic",
+                offset: (screenWidthSize == "small") && -64
             });
         };
 
@@ -97,10 +99,10 @@ const ShortNavbar: React.FC = () => {
 
             const swipeDistance = touchStartY - touchEndY;
 
-            if (swipeDistance > 50) {
+            if (swipeDistance > 20) {
                 // Swipe up (scroll down)
                 navigateSections("down");
-            } else if (swipeDistance < -50) {
+            } else if (swipeDistance < -20) {
                 // Swipe down (scroll up)
                 navigateSections("up");
             }
@@ -120,27 +122,45 @@ const ShortNavbar: React.FC = () => {
         };
     }, []);
     return (
-        <nav className={styles.Navbar}>
-            <ul className={styles.LinksContainer}>
-                <div className={styles.LinkContainer} >
-                    <Link
-                        to="/"
-                        className={styles.Links}>
-                        Home
-                    </Link>
-                </div>
-                <div className={styles.LinkContainer} >
-                    <div className={styles.Links}>
-                        <div
-                            className={styles.Cv}
-                            onClick={openCV}>
-                            CV
+        <>
+            {!(screenWidthSize == "small") ? <nav className={styles.Navbar}>
+                <ul className={styles.LinksContainer}>
+                    <div className={styles.LinkContainer} >
+                        <Link
+                            to="/"
+                            className={styles.Links}>
+                            Home
+                        </Link>
+                    </div>
+                    <div className={styles.LinkContainer} >
+                        <div className={styles.Links}>
+                            <div
+                                className={styles.Cv}
+                                onClick={openCV}>
+                                CV
+                            </div>
                         </div>
                     </div>
-                </div>
-            </ul>
-            <Contacts />
-        </nav>);
+                </ul>
+                <Contacts />
+            </nav> :
+                <nav className={styles.NavbarMobile}>
+                    <Contacts />
+                    <div className={styles.LinkContainerMobile} >
+                        <div className={styles.LinksMobile}>
+                            <CVLink
+                                activeClass={styles.active}
+                                spy={true}
+                                smooth={'easeInOutCubic'}
+                                to="welcomeScreen" className={styles.Cv}
+                                onClick={openCV}>
+                                CV
+                            </CVLink>
+                        </div>
+                    </div>
+                </nav>}
+        </>
+    );
 }
 
 export default ShortNavbar
